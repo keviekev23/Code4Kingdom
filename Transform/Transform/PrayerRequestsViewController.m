@@ -11,6 +11,7 @@
 @interface PrayerRequestsViewController ()
 
 - (void) loadCurrentLocalUrl:(NSString *)url;
+- (void) loadJavascript:(NSString *)url;
 
 @end
 
@@ -22,8 +23,19 @@
 - (void) loadCurrentLocalUrl:(NSString *)url
 {
     NSString *filename = [[NSBundle mainBundle] pathForResource:url ofType:@"html"];
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSURL *baseURL = [NSURL fileURLWithPath:path];
     NSString* htmlString = [NSString stringWithContentsOfFile:filename encoding:NSUTF8StringEncoding error:nil];
-    [self.contentWebView loadHTMLString:htmlString baseURL:nil];
+    [self.contentWebView loadHTMLString:htmlString baseURL:baseURL];
+}
+
+- (void) loadJavascript:(NSString *)url
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:url ofType:@"js"];
+    if (filePath) {
+        NSString *script = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+        [self.contentWebView stringByEvaluatingJavaScriptFromString:script];
+    }
 }
 
 - (void)viewDidLoad
@@ -32,6 +44,18 @@
     // Do any additional setup after loading the view.
     self.currentUrlName = @"prayer";
     [self loadCurrentLocalUrl:self.currentUrlName];
+}
+
+#pragma mark - UIWebViewDelegate
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+//    NSString *jqueryCDN = @"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
+//    NSData *jquery = [NSData dataWithContentsOfURL:[NSURL URLWithString:jqueryCDN]];
+//    NSString *jqueryString = [[NSMutableString alloc] initWithData:jquery encoding:NSUTF8StringEncoding];
+//    [webView stringByEvaluatingJavaScriptFromString:jqueryString];
+//    
+    [self loadJavascript:@"js/bootstrap"];
+    [self loadJavascript:@"prayer"];
 }
 
 - (void)didReceiveMemoryWarning

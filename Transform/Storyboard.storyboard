@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Prayer Requests View Controller-->
         <scene sceneID="7fU-kl-kk9">
             <objects>
-                <viewController id="OL1-b3-jdM" sceneMemberID="viewController">
+                <viewController id="OL1-b3-jdM" customClass="PrayerRequestsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vZP-9c-iMR"/>
                         <viewControllerLayoutGuide type="bottom" id="Vn2-Hg-fPN"/>
@@ -20,11 +20,17 @@
                                 <rect key="frame" x="0.0" y="65" width="320" height="453"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OL1-b3-jdM" id="H4Y-wU-teV"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="IRN-We-vXb"/>
+                    <connections>
+                        <outlet property="contentWebView" destination="dOY-pD-hWw" id="Y47-3k-sBG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="giB-dd-XtV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
