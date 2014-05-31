@@ -46,6 +46,7 @@
 		0A6EDA1D193A7E980072B28D /* prayer_single_view.html in Resources */ = {isa = PBXBuildFile; fileRef = 0A6EDA1A193A7E980072B28D /* prayer_single_view.html */; };
 		0A6EDA21193A80910072B28D /* MainNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EDA20193A80910072B28D /* MainNavigationViewController.m */; };
 		0A6EDA22193A81FE0072B28D /* prayer_single_view.js in Resources */ = {isa = PBXBuildFile; fileRef = 0A6EDA1B193A7E980072B28D /* prayer_single_view.js */; };
+		0A6EDA24193A8F9C0072B28D /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6EDA23193A8F9C0072B28D /* JavaScriptCore.framework */; };
 		1093C6DD0CAD406FA4CD979B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5929EC6AC34D8D871760F5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		0A6EDA1B193A7E980072B28D /* prayer_single_view.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = prayer_single_view.js; sourceTree = "<group>"; };
 		0A6EDA1F193A80910072B28D /* MainNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainNavigationViewController.h; path = Transform/MainNavigationViewController.h; sourceTree = "<group>"; };
 		0A6EDA20193A80910072B28D /* MainNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainNavigationViewController.m; path = Transform/MainNavigationViewController.m; sourceTree = "<group>"; };
+		0A6EDA23193A8F9C0072B28D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		42A1168A299C469AA21AA34E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AA5929EC6AC34D8D871760F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A6EDA24193A8F9C0072B28D /* JavaScriptCore.framework in Frameworks */,
 				0A6ED9A219394C8F0072B28D /* CoreGraphics.framework in Frameworks */,
 				0A6ED9A419394C8F0072B28D /* UIKit.framework in Frameworks */,
 				0A6ED9A019394C8F0072B28D /* Foundation.framework in Frameworks */,
@@ -163,6 +166,7 @@
 		0A6ED99E19394C8F0072B28D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A6EDA23193A8F9C0072B28D /* JavaScriptCore.framework */,
 				0A6ED99F19394C8F0072B28D /* Foundation.framework */,
 				0A6ED9A119394C8F0072B28D /* CoreGraphics.framework */,
 				0A6ED9A319394C8F0072B28D /* UIKit.framework */,
