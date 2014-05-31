@@ -42,6 +42,7 @@
 		0A6EDA12193A710B0072B28D /* GatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EDA11193A710B0072B28D /* GatherViewController.m */; };
 		0A6EDA15193A71DC0072B28D /* WebContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EDA14193A71DC0072B28D /* WebContentViewController.m */; };
 		1093C6DD0CAD406FA4CD979B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5929EC6AC34D8D871760F5 /* libPods.a */; };
+		D7E5579C193A7F750032DDB4 /* data_structure.js in Sources */ = {isa = PBXBuildFile; fileRef = D7E5579B193A7F750032DDB4 /* data_structure.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		0A6EDA14193A71DC0072B28D /* WebContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebContentViewController.m; path = Transform/WebContentViewController.m; sourceTree = "<group>"; };
 		42A1168A299C469AA21AA34E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AA5929EC6AC34D8D871760F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7E5579B193A7F750032DDB4 /* data_structure.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = data_structure.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				0A6ED9EB193A465D0072B28D /* prayer.css */,
 				0A6ED9EC193A465D0072B28D /* prayer.html */,
 				0A6ED9ED193A465D0072B28D /* prayer.js */,
+				D7E5579B193A7F750032DDB4 /* data_structure.js */,
 			);
 			name = html;
 			path = Transform/html;
@@ -412,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E5579C193A7F750032DDB4 /* data_structure.js in Sources */,
 				0A6ED9D7193A43030072B28D /* PrayerRequestsViewController.m in Sources */,
 				0A6ED9B019394C8F0072B28D /* AppDelegate.m in Sources */,
 				0A6EDA15193A71DC0072B28D /* WebContentViewController.m in Sources */,
