@@ -22,6 +22,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.webView.delegate = self;
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:92.0/255.0 green:184.0/255.0 blue:230.0/255.0 alpha:1.0];
     self.navigationController.navigationBar.translucent = NO;
