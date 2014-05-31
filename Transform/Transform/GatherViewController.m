@@ -20,6 +20,8 @@
     // Do any additional setup after loading the view.
     
     [self loadCurrentLocalUrl:@"meetings"];
+    
+    self.title = @"Gather";
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
