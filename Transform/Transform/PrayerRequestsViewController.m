@@ -7,6 +7,7 @@
 //
 
 #import "PrayerRequestsViewController.h"
+#import "PrayerDetailViewController.h"
 
 @interface PrayerRequestsViewController ()
 
@@ -32,7 +33,19 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    NSLog(@"url: %@", request.URL.absoluteString);
+    NSLog(@"filename: %@", request.URL.lastPathComponent);
+    NSArray *pathComponents = request.URL.pathComponents;
+    NSString *file = [pathComponents objectAtIndex:pathComponents.count-2];
+    int prayerId = [[pathComponents objectAtIndex:pathComponents.count-1] integerValue];
+    NSUInteger rangeLocation = [file rangeOfString:@"."].location;
+    if (rangeLocation != NSNotFound) {
+        NSString *fileName = [file substringWithRange:NSMakeRange(0, [file rangeOfString:@"."].location)];
+        if ([fileName isEqualToString:@"prayer_single_view"]) {
+            PrayerDetailViewController *vc = (PrayerDetailViewController *)[[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([PrayerDetailViewController class])];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        return NO;
+    }
     return YES;
 }
 
