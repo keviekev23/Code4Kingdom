@@ -1,5 +1,5 @@
 body {
-	font-family: "Avenir Next", sans-serif !important;
+	font-family: "Avenir Next Condensed", sans-serif !important;
 	background:#5CB8E6;
 	font-size: 15px;
 }
@@ -16,7 +16,7 @@ body {
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
     z-index: 10;
-    padding:15px 10px;
+    padding:22px 15px;
 }
 .carousel-control.left, .carousel-control.right {
     background-image: none;
@@ -47,7 +47,7 @@ body {
 	margin: -22.5px;
 }
 .carousel p{
-	font-size: 13.5px;
+	font-size: 15px;
 }
 .carousel h3{
 	padding:7.5px;
