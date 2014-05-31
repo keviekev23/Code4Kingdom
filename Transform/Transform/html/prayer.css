@@ -2,6 +2,7 @@ body {
 	font-family: "Avenir Next Condensed", sans-serif !important;
 	background:#5CB8E6;
 	font-size: 15px;
+	color:#5CB8E6;
 }
 
 
@@ -94,6 +95,7 @@ a:hover
 	border-radius:7.5px;
 	padding:10px;
 	vertical-align: middle;
+	font-weight:600;
 }
 #draggablePanelList .panel-heading{
 	border:none;
