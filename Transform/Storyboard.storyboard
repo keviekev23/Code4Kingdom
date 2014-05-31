@@ -79,6 +79,51 @@
             </objects>
             <point key="canvasLocation" x="679" y="367"/>
         </scene>
+        <!--Navigation Controller - Profile-->
+        <scene sceneID="Zw2-bn-LEB">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Fqi-ZF-5XK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="41f-66-1kb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NMM-73-Ccl">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oHT-Pa-jtu" kind="relationship" relationship="rootViewController" id="Htg-xa-e93"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m70-CO-Szw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679" y="1060"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="sw5-xG-e9Q">
+            <objects>
+                <viewController id="oHT-Pa-jtu" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vjU-cM-hfe">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="bTV-Z4-ZPY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oHT-Pa-jtu" id="gUd-Sz-N0V"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="68I-cm-U9Z"/>
+                    <connections>
+                        <outlet property="webView" destination="bTV-Z4-ZPY" id="zgO-oU-Hy7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FGi-cW-aqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="1060"/>
+        </scene>
         <!--Prayer Requests View Controller-->
         <scene sceneID="sAr-2K-oRO">
             <objects>
@@ -112,7 +157,7 @@
         <scene sceneID="RPJ-cG-nli">
             <objects>
                 <navigationController definesPresentationContext="YES" id="PB0-6A-kua" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gather" id="Fpa-4o-zfO"/>
+                    <tabBarItem key="tabBarItem" title="Gather" image="house.png" id="Fpa-4o-zfO"/>
                     <navigationItem key="navigationItem" id="HvU-KN-HJR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GZk-cx-NKM">
                         <autoresizingMask key="autoresizingMask"/>
@@ -129,7 +174,7 @@
         <scene sceneID="Llq-eI-ugD">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="w1a-Ku-Sqm" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5xO-eV-mBX">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -138,6 +183,7 @@
                     <connections>
                         <segue destination="q5K-us-gb7" kind="relationship" relationship="viewControllers" id="RS4-03-dnG"/>
                         <segue destination="PB0-6A-kua" kind="relationship" relationship="viewControllers" id="GhJ-Px-uS2"/>
+                        <segue destination="Fqi-ZF-5XK" kind="relationship" relationship="viewControllers" id="xb4-Az-pgJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyh-Nu-aFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -145,6 +191,9 @@
             <point key="canvasLocation" x="140" y="22"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house.png" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

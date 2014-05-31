@@ -24,6 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self loadCurrentLocalUrl:@"prayer"];
+    
+    self.title = @"Prayers & Praise";
 }
 
 #pragma mark - UIWebViewDelegate

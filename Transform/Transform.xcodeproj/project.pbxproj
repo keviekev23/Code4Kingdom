@@ -47,6 +47,9 @@
 		0A6EDA21193A80910072B28D /* MainNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EDA20193A80910072B28D /* MainNavigationViewController.m */; };
 		0A6EDA22193A81FE0072B28D /* prayer_single_view.js in Resources */ = {isa = PBXBuildFile; fileRef = 0A6EDA1B193A7E980072B28D /* prayer_single_view.js */; };
 		0A6EDA24193A8F9C0072B28D /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6EDA23193A8F9C0072B28D /* JavaScriptCore.framework */; };
+		0AB229CB193A9C8600E58249 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB229CA193A9C8600E58249 /* house@2x.png */; };
+		0AC96A60193A98B500584BF9 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC96A5F193A98B500584BF9 /* ProfileViewController.m */; };
+		0AC96A62193A993E00584BF9 /* profile.html in Resources */ = {isa = PBXBuildFile; fileRef = 0AC96A61193A993E00584BF9 /* profile.html */; };
 		1093C6DD0CAD406FA4CD979B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5929EC6AC34D8D871760F5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +80,7 @@
 		0A6ED9C019394C900072B28D /* TransformTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TransformTests-Info.plist"; sourceTree = "<group>"; };
 		0A6ED9C219394C900072B28D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A6ED9C419394C900072B28D /* TransformTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransformTests.m; sourceTree = "<group>"; };
-		0A6ED9CE193A400B0072B28D /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		0A6ED9CE193A400B0072B28D /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
 		0A6ED9D5193A43030072B28D /* PrayerRequestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrayerRequestsViewController.h; path = Transform/PrayerRequestsViewController.h; sourceTree = "<group>"; };
 		0A6ED9D6193A43030072B28D /* PrayerRequestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrayerRequestsViewController.m; path = Transform/PrayerRequestsViewController.m; sourceTree = "<group>"; };
 		0A6ED9DA193A465D0072B28D /* bootstrap-theme.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "bootstrap-theme.css"; sourceTree = "<group>"; };
@@ -110,6 +113,10 @@
 		0A6EDA1F193A80910072B28D /* MainNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainNavigationViewController.h; path = Transform/MainNavigationViewController.h; sourceTree = "<group>"; };
 		0A6EDA20193A80910072B28D /* MainNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainNavigationViewController.m; path = Transform/MainNavigationViewController.m; sourceTree = "<group>"; };
 		0A6EDA23193A8F9C0072B28D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		0AB229CA193A9C8600E58249 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
+		0AC96A5E193A98B500584BF9 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Transform/ProfileViewController.h; sourceTree = "<group>"; };
+		0AC96A5F193A98B500584BF9 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Transform/ProfileViewController.m; sourceTree = "<group>"; };
+		0AC96A61193A993E00584BF9 /* profile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = profile.html; sourceTree = "<group>"; };
 		42A1168A299C469AA21AA34E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AA5929EC6AC34D8D871760F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,7 +150,7 @@
 		0A6ED99319394C8F0072B28D = {
 			isa = PBXGroup;
 			children = (
-				0A6ED9CE193A400B0072B28D /* Storyboard.storyboard */,
+				0AB229C9193A9C8600E58249 /* assets */,
 				0A6ED9D8193A430B0072B28D /* controllers */,
 				0A6ED9D2193A41320072B28D /* html */,
 				0A6ED9A519394C8F0072B28D /* Transform */,
@@ -179,6 +186,7 @@
 		0A6ED9A519394C8F0072B28D /* Transform */ = {
 			isa = PBXGroup;
 			children = (
+				0A6ED9CE193A400B0072B28D /* Storyboard.storyboard */,
 				0A6ED9AE19394C8F0072B28D /* AppDelegate.h */,
 				0A6ED9AF19394C8F0072B28D /* AppDelegate.m */,
 				0A6ED9B119394C8F0072B28D /* Images.xcassets */,
@@ -231,6 +239,7 @@
 				0A6ED9EB193A465D0072B28D /* prayer.css */,
 				0A6ED9EC193A465D0072B28D /* prayer.html */,
 				0A6ED9ED193A465D0072B28D /* prayer.js */,
+				0AC96A61193A993E00584BF9 /* profile.html */,
 			);
 			name = html;
 			path = Transform/html;
@@ -239,6 +248,8 @@
 		0A6ED9D8193A430B0072B28D /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0AC96A5E193A98B500584BF9 /* ProfileViewController.h */,
+				0AC96A5F193A98B500584BF9 /* ProfileViewController.m */,
 				0A6EDA1F193A80910072B28D /* MainNavigationViewController.h */,
 				0A6EDA20193A80910072B28D /* MainNavigationViewController.m */,
 				0A6EDA10193A710B0072B28D /* GatherViewController.h */,
@@ -284,6 +295,15 @@
 				0A6ED9E7193A465D0072B28D /* bootstrap.min.js */,
 			);
 			path = js;
+			sourceTree = "<group>";
+		};
+		0AB229C9193A9C8600E58249 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				0AB229CA193A9C8600E58249 /* house@2x.png */,
+			);
+			name = assets;
+			path = Transform/assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,11 +396,13 @@
 				0A6ED9F2193A465D0072B28D /* bootstrap.css.map in Resources */,
 				0A6EDA1D193A7E980072B28D /* prayer_single_view.html in Resources */,
 				0A6ED9B219394C8F0072B28D /* Images.xcassets in Resources */,
+				0AB229CB193A9C8600E58249 /* house@2x.png in Resources */,
 				0A6ED9EE193A465D0072B28D /* bootstrap-theme.css in Resources */,
 				0A6ED9F0193A465D0072B28D /* bootstrap-theme.min.css in Resources */,
 				0A6ED9F7193A465D0072B28D /* glyphicons-halflings-regular.woff in Resources */,
 				0A6ED9F1193A465D0072B28D /* bootstrap.css in Resources */,
 				0A6ED9CF193A400B0072B28D /* Storyboard.storyboard in Resources */,
+				0AC96A62193A993E00584BF9 /* profile.html in Resources */,
 				0A6ED9FA193A465D0072B28D /* meetings.css in Resources */,
 				0A6EDA07193A63B70072B28D /* bootstrap.js in Resources */,
 				0A6EDA08193A63BB0072B28D /* bootstrap.min.js in Resources */,
@@ -440,6 +462,7 @@
 			files = (
 				0A6ED9D7193A43030072B28D /* PrayerRequestsViewController.m in Sources */,
 				0A6ED9B019394C8F0072B28D /* AppDelegate.m in Sources */,
+				0AC96A60193A98B500584BF9 /* ProfileViewController.m in Sources */,
 				0A6EDA15193A71DC0072B28D /* WebContentViewController.m in Sources */,
 				0A6ED9AC19394C8F0072B28D /* main.m in Sources */,
 				0A6EDA21193A80910072B28D /* MainNavigationViewController.m in Sources */,
