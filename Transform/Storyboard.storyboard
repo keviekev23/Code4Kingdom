@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="w1a-Ku-Sqm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="w1a-Ku-Sqm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Prayer Requests View Controller-->
+        <!--Gather View Controller-->
         <scene sceneID="7fU-kl-kk9">
             <objects>
-                <viewController id="OL1-b3-jdM" customClass="PrayerRequestsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vZP-9c-iMR"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vn2-Hg-fPN"/>
-                    </layoutGuides>
+                <viewController id="OL1-b3-jdM" customClass="GatherViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0gI-ng-a74">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOY-pD-hWw">
-                                <rect key="frame" x="0.0" y="65" width="320" height="453"/>
+                            <webView contentMode="scaleToFill" id="dOY-pD-hWw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -27,9 +23,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="IRN-We-vXb"/>
                     <connections>
-                        <outlet property="contentWebView" destination="dOY-pD-hWw" id="Y47-3k-sBG"/>
+                        <outlet property="webView" destination="dOY-pD-hWw" id="xxY-b5-vop"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="giB-dd-XtV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,16 +53,12 @@
         <scene sceneID="sAr-2K-oRO">
             <objects>
                 <viewController id="K7o-XO-d6m" customClass="PrayerRequestsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XC7-Jz-gQq"/>
-                        <viewControllerLayoutGuide type="bottom" id="oHc-sW-HSQ"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e6Z-IP-pIl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZC-Yx-7Cd">
-                                <rect key="frame" x="0.0" y="65" width="320" height="453"/>
+                            <webView contentMode="scaleToFill" id="TZC-Yx-7Cd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -75,9 +68,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="YAA-90-5hd"/>
                     <connections>
-                        <outlet property="contentWebView" destination="TZC-Yx-7Cd" id="oxY-Ny-Lg8"/>
+                        <outlet property="webView" destination="TZC-Yx-7Cd" id="Mlt-nt-Vdk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffX-Wx-U1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -112,8 +106,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="PB0-6A-kua" kind="relationship" relationship="viewControllers" id="Npq-R1-oa9"/>
-                        <segue destination="q5K-us-gb7" kind="relationship" relationship="viewControllers" id="bQC-T1-8bo"/>
+                        <segue destination="q5K-us-gb7" kind="relationship" relationship="viewControllers" id="RS4-03-dnG"/>
+                        <segue destination="PB0-6A-kua" kind="relationship" relationship="viewControllers" id="GhJ-Px-uS2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyh-Nu-aFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
