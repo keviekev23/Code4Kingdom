@@ -1,39 +1,25 @@
 //
-//  PrayerRequestsViewController.m
+//  GatherViewController.m
 //  Transform
 //
 //  Created by Kevin Liang on 5/31/14.
 //  Copyright (c) 2014 Code4Kingdom. All rights reserved.
 //
 
-#import "PrayerRequestsViewController.h"
+#import "GatherViewController.h"
 
-@interface PrayerRequestsViewController ()
-
+@interface GatherViewController ()
 
 @end
 
-@implementation PrayerRequestsViewController
-
-
-
+@implementation GatherViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self loadCurrentLocalUrl:@"prayer"];
-}
-
-#pragma mark - UIWebViewDelegate
-- (void)webViewDidFinishLoad:(UIWebView *)webView
-{    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    [self loadCurrentLocalUrl:@"meetings"];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -43,6 +29,12 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*

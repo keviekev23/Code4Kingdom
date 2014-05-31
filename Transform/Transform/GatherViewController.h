@@ -1,5 +1,5 @@
 //
-//  PrayerRequestsViewController.h
+//  GatherViewController.h
 //  Transform
 //
 //  Created by Kevin Liang on 5/31/14.
@@ -8,6 +8,6 @@
 
 #import "WebContentViewController.h"
 
-@interface PrayerRequestsViewController : WebContentViewController
+@interface GatherViewController : WebContentViewController
 
 @end
