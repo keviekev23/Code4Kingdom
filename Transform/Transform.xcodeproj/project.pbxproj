@@ -20,6 +20,9 @@
 		0A6ED9C319394C900072B28D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A6ED9C119394C900072B28D /* InfoPlist.strings */; };
 		0A6ED9C519394C900072B28D /* TransformTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED9C419394C900072B28D /* TransformTests.m */; };
 		0A6ED9CF193A400B0072B28D /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6ED9CE193A400B0072B28D /* Storyboard.storyboard */; };
+		0A6ED9D3193A41320072B28D /* meetings.html in Resources */ = {isa = PBXBuildFile; fileRef = 0A6ED9D0193A41320072B28D /* meetings.html */; };
+		0A6ED9D4193A41320072B28D /* prayer.html in Resources */ = {isa = PBXBuildFile; fileRef = 0A6ED9D1193A41320072B28D /* prayer.html */; };
+		0A6ED9D7193A43030072B28D /* PrayerRequestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED9D6193A43030072B28D /* PrayerRequestsViewController.m */; };
 		1093C6DD0CAD406FA4CD979B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5929EC6AC34D8D871760F5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,10 @@
 		0A6ED9C219394C900072B28D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A6ED9C419394C900072B28D /* TransformTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransformTests.m; sourceTree = "<group>"; };
 		0A6ED9CE193A400B0072B28D /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		0A6ED9D0193A41320072B28D /* meetings.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = meetings.html; sourceTree = "<group>"; };
+		0A6ED9D1193A41320072B28D /* prayer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = prayer.html; sourceTree = "<group>"; };
+		0A6ED9D5193A43030072B28D /* PrayerRequestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrayerRequestsViewController.h; path = Transform/PrayerRequestsViewController.h; sourceTree = "<group>"; };
+		0A6ED9D6193A43030072B28D /* PrayerRequestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrayerRequestsViewController.m; path = Transform/PrayerRequestsViewController.m; sourceTree = "<group>"; };
 		42A1168A299C469AA21AA34E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AA5929EC6AC34D8D871760F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				0A6ED9CE193A400B0072B28D /* Storyboard.storyboard */,
+				0A6ED9D8193A430B0072B28D /* controllers */,
+				0A6ED9D2193A41320072B28D /* html */,
 				0A6ED9A519394C8F0072B28D /* Transform */,
 				0A6ED9BE19394C900072B28D /* TransformTests */,
 				0A6ED99E19394C8F0072B28D /* Frameworks */,
@@ -151,6 +160,25 @@
 				0A6ED9C119394C900072B28D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A6ED9D2193A41320072B28D /* html */ = {
+			isa = PBXGroup;
+			children = (
+				0A6ED9D0193A41320072B28D /* meetings.html */,
+				0A6ED9D1193A41320072B28D /* prayer.html */,
+			);
+			name = html;
+			path = Transform/html;
+			sourceTree = "<group>";
+		};
+		0A6ED9D8193A430B0072B28D /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A6ED9D5193A43030072B28D /* PrayerRequestsViewController.h */,
+				0A6ED9D6193A43030072B28D /* PrayerRequestsViewController.m */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +258,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A6ED9D4193A41320072B28D /* prayer.html in Resources */,
+				0A6ED9D3193A41320072B28D /* meetings.html in Resources */,
 				0A6ED9AA19394C8F0072B28D /* InfoPlist.strings in Resources */,
 				0A6ED9B219394C8F0072B28D /* Images.xcassets in Resources */,
 				0A6ED9CF193A400B0072B28D /* Storyboard.storyboard in Resources */,
@@ -284,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A6ED9D7193A43030072B28D /* PrayerRequestsViewController.m in Sources */,
 				0A6ED9B019394C8F0072B28D /* AppDelegate.m in Sources */,
 				0A6ED9AC19394C8F0072B28D /* main.m in Sources */,
 			);
