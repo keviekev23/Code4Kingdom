@@ -7,7 +7,7 @@ window.onload = function() {
 	for(var i = 0; i < divs.length; i++){
 	   	//do something to each div like
 	   	if(divs[i].className == "circle-indicator prayer-circle"){
-			divs[i].style.backgroundColor = "green";
+			divs[i].style.backgroundColor = "#99FF66";
 	   	}
 	   	if(divs[i].className == "circle-indicator praise-circle"){
 			divs[i].style.backgroundColor = "yellow";
