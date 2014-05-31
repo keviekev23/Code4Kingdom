@@ -1,7 +1,7 @@
 body {
 	font-family:Arial, Helvetica, sans-serif;
 	background:#5CB8E6;
-	font-size: 10px;
+	font-size: 15px;
 }
 
 
@@ -10,13 +10,13 @@ body {
 
 /* Carousel base class */
 .carousel {
-  height: 100px;
+  height: 150px;
   margin-bottom: 0px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
     z-index: 10;
-    padding:0px;
+    padding:15px 10px;
 }
 .carousel-control.left, .carousel-control.right {
     background-image: none;
@@ -26,7 +26,7 @@ body {
 }
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 100px;
+  height: 150px;
   background-color:#FFF;
 }
 .carousel-inner > .item > img {
@@ -34,37 +34,38 @@ body {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 100px;  
+  height: 150px;  
 }
 .carousel h1,p,h3{
     text-shadow:none;
-	margin: -10px;
+	margin: -15px;
 	color:#5CB8E6;
 }
 .carousel h1{
-	margin:-2.5px;
-	font-size: 12px;
-	margin: -15px;
+	margin:-5px;
+	font-size: 18px;
+	margin: -22.5px;
 }
 .carousel p{
-	font-size: 9px;
+	font-size: 13.5px;
 }
 .carousel h3{
-	padding:5px;
-	font-size: 10px;
+	padding:7.5px;
+	font-size: 15px;
 }
 .btn{
-	font-size: 10px;
-	margin:5px;
+	font-size: 15px;
+	margin:10px;
+	padding:5px;
 }
 .carousel h2{
     color:#5CB8E6;
-	font-size: 5px;
+	font-size: 7.5px;
     text-shadow:none;
-    padding: 2px;
+    padding: 3px;
 }
 .container{
-	height:125px;
+	height:187.5px;
 }
 
 /* show the move cursor as the user moves the mouse over the panel header.*/
@@ -72,53 +73,54 @@ body {
     cursor: move;
 }
 #draggablePanelList{
-	border-radius:5px;
+	border-radius:7.5px;
 	border:none;
 }
 .panel{
-	margin:15px 5px;
+	margin:22.5px 7.5px;
 	border:none;
 
 }
 #draggablePanelList .panel-body{
-	border-radius:5px;
-	padding:5px;
+	border-radius:7.5px;
+	padding:7.5px;
+	vertical-align: middle;
 }
 #draggablePanelList .panel-heading{
 	border:none;
 	background-color:#5CB8E6;
 	color:#FFF; 
-	font-size: 10px;
+	font-size: 15px;
 }
 .content-container{
 
 }
 .pic-container{
-	width: 55px;
+	width: 82.5px;
 	float: left;
 }
 .pic{
-	margin:5px;
+	margin:7.5px;
 	width: 100%;
 	height: 100%;
 	background: #FFF;
-	border-radius:5px;
+	border-radius:7.5px;
 }
 .info-container{
-	margin-left: 55px;
+	margin-left: 82.5px;
 }
 
 .panel-info{
-	height:55px;
+	height:82.5px;
 }
 .circle-indicator{
 /*	background-color: yellow;*/	
-	height: 12.5px;
-	width: 12.5px;
-	border-radius: 6.25px;
+	height: 18.75px;
+	width: 18.75px;
+	border-radius: 15.625px;
 	float:right;
-	margin-right: 2.5px;
-	margin-top: -17px;
+	margin-right: 6.25px;
+	margin-top: -25.5px;
 }
 
 
