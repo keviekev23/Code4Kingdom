@@ -98,7 +98,15 @@ body {
 .panel-info{
 	height:110px;
 }
-
+.circle-indicator{
+/*	background-color: yellow;*/	
+	height: 25px;
+	width: 25px;
+	border-radius: 12.5px;
+	float:right;
+	margin-right: 5px;
+	margin-top: -34px;
+}
 
 
 
