@@ -7,18 +7,34 @@
 //
 
 #import "PrayerDetailViewController.h"
+#import <JavaScriptCore/JavaScriptCore.h>
 
 @interface PrayerDetailViewController ()
+
+//@property (nonatomic, strong) JSContext *context;
 
 @end
 
 @implementation PrayerDetailViewController
+
+@synthesize prayerId = _prayerId;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self loadCurrentLocalUrl:@"prayer_single_view"];
+    
+    //self.context = [[JSContext alloc] initWithVirtualMachine:[[JSVirtualMachine alloc] init]];
+    
+    self.prayerId = 1;
+    //[self.context evaluateScript:[NSString stringWithFormat:@"selectItem(%d);", self.prayerId]];
+}
+
+#pragma mark - UIWebViewDelegate
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    //[self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"selectItem(%d)", self.prayerId]];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
