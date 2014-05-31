@@ -56,16 +56,29 @@ body {
 }
 
 /* show the move cursor as the user moves the mouse over the panel header.*/
-#draggablePanelList .panel-heading {
+#draggablePanelList .panel-heading{
     cursor: move;
 }
 #draggablePanelList{
-
+	border-radius:10px;
+	border:none;
 }
 .panel{
-	margin:25px 10px;
+	margin:30px 20px;
+	border:none;
+
+}
+#draggablePanelList .panel-body{
+	border-radius:10px;
+}
+#draggablePanelList .panel-heading{
+	border:none;
+	background-color:#5CB8E6;
+	color:#FFF; 
+	font-size: 20px;
 }
 .content-container{
+
 }
 .pic-container{
 	width: 110px;
@@ -82,8 +95,9 @@ body {
 	margin-left: 110px;
 }
 
-
-
+.panel-info{
+	height:110px;
+}
 
 
 
