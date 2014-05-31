@@ -47,7 +47,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h3>Add a new Verse!</h3>
-              <p><a class="btn btn-sml btn-primary" href="#" role="button" style="margin-bottom:20px;background-color:#5CB8E6;border:none;">Click here</a></p><p></p>
+              <p><a class="btn btn-sml btn-primary" href="#" role="button" style="margin-bottom:20px;background-color:#5CB8E6;border:none;" data-toggle="modal" data-target="#addVerse">Click here</a></p><p></p>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@
     </div><!-- /.carousel -->
 
   <!-- Add Prayer Request Button --> 
-  <a class="btn btn-sml btn-primary" id="addPrayerRequest" href="#" role="button" style="background-color:#5CB8E6;border:1px solid white; border-radius:4px;">+ Add Prayer Request</a>
+  <a class="btn btn-sml btn-primary" id="addPrayerRequest" href="#" role="button" style="background-color:#5CB8E6;border:1px solid white; border-radius:4px;" data-toggle="modal" data-target="#addModal">+ Add Prayer/Praise</a>
 
 	<!-- Bootstrap 3 panel list. -->
 	<ul id="draggablePanelList" class="list-unstyled">
@@ -70,7 +70,7 @@
 			        <div class="panel-heading">PRAYER REQUEST</div>
 			        <div class="circle-indicator prayer-circle"> </div>
 			        <a href="prayer_single_view.html/1"><div class="panel-body">My mom is in the hospital</div></a>
-			    </li>
+			  </li>
 			</div> 
 		</div>
 		<div class="content-container">
@@ -82,7 +82,7 @@
 			        <div class="panel-heading">PRAISE REPORT</div>
 			        <div class="circle-indicator praise-circle"> </div>
 			        <a href="prayer_single_view.html/2"><div class="panel-body">I did well on my finals! Yay!</div></a>
-			    </li>
+			  </li>
 			</div> 
 		</div>
     <div class="content-container">
@@ -94,7 +94,7 @@
               <div class="panel-heading">PRAYER REQUEST</div>
               <div class="circle-indicator prayer-circle"> </div>
               <a href="prayer_single_view.html/3"><div class="panel-body">I need to find a church!</div></a>
-          </li>
+        </li>
       </div> 
     </div>
     <div class="content-container">
@@ -110,6 +110,35 @@
       </div> 
     </div>
 	</ul>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Add Prayer/Praise</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <input type="radio" name="type" value="prayer" style="border:1px solid grey;"> Prayer Request<br>
+          <input type="radio" name="type" value="praise" style="border:1px solid grey;"> Praise Report<br>
+
+          Title: <input type="text" name="title" style="border:1px solid grey;width:100%;"><br>
+          Description: <textarea name="description" cols="20" rows="3"style="border:1px solid grey;width:100%;" ></textarea>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default cancel" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary add" style="background-color:#5CB8E6;border:1px solid white;">Add</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 </body>
 
 

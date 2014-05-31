@@ -63,7 +63,7 @@ a:hover
 	padding:7.5px;
 	font-size: 15px;
 }
-.btn{
+.carousel-caption .btn{
 	font-size: 15px;
 	margin:10px;
 	padding:5px;
@@ -142,4 +142,11 @@ a:hover
 	margin-bottom: -15px;
 }
 
+.btn .cancel{
+
+}
+.btn .btn-primary{
+	background-color:#5CB8E6
+
+}
 
