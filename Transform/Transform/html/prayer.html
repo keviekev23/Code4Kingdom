@@ -7,10 +7,64 @@
 	<script type="text/javascript" src="prayer.js"></script> 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel='stylesheet' href='prayer.css'>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')
+	</script>
+	<script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
-	<div id="test" onclick="popup()"> Prayer! </div>
+	    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+      <!-- Indicators -->
+<!--       <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol> -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Verse of the Week</h1>
+              <h2>May 31, 2014</h2> 
+              <p>"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life." -John 3:16</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Verse of the Week</h1>    
+              <h2>June 7, 2014</h2>           
+              <p>"Do not conform to the pattern of this world, but be transformed by the renewing of your mind. Then you will be able to test and approve what God's will is his good, pleasing and perfect will." -Romans 12:2</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Verse of the Week</h1>
+              <h2>June 14, 2014</h2> 
+              <p>"My brethren, count it all joy when you fall into various trials, knowing that the testing of your faith produces patience." -James 1:2-3</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <h3>Add a new Verse!</h3><p></p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Click here</a></p><p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
 
 	<!-- Bootstrap 3 panel list. -->
 	<ul id="draggablePanelList" class="list-unstyled">
