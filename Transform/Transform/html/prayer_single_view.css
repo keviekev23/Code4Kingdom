@@ -1,0 +1,20 @@
+body {
+	font-family: "Avenir Next Condensed", sans-serif !important;
+	background:#5CB8E6;
+	font-size: 15px;
+}
+
+.head-container{
+	height:150px;
+	border:1px solid yellow;
+}
+
+.body-container{
+	height: 150px;
+	border: 1px solid red;
+}
+
+.comments-container{
+	height: 150px;
+	border: 1px solid blue;
+}

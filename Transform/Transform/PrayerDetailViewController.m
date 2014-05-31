@@ -34,7 +34,7 @@
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"selectItem(%d)", self.prayerId]];
+    //[self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"selectItem(%d)", self.prayerId]];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

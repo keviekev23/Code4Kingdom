@@ -132,9 +132,12 @@ a:hover
 	margin-top: -25.5px;
 }
 
-
-
-
-
+#addPrayerRequest{
+	position:relative;
+	left: calc(50% - 70px);
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: -15px;
+}
 
 
