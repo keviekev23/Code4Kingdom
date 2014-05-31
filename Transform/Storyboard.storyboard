@@ -79,11 +79,11 @@
             </objects>
             <point key="canvasLocation" x="679" y="367"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Profile-->
         <scene sceneID="Zw2-bn-LEB">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Fqi-ZF-5XK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="41f-66-1kb"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="41f-66-1kb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NMM-73-Ccl">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -157,7 +157,7 @@
         <scene sceneID="RPJ-cG-nli">
             <objects>
                 <navigationController definesPresentationContext="YES" id="PB0-6A-kua" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gather" id="Fpa-4o-zfO"/>
+                    <tabBarItem key="tabBarItem" title="Gather" image="house.png" id="Fpa-4o-zfO"/>
                     <navigationItem key="navigationItem" id="HvU-KN-HJR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GZk-cx-NKM">
                         <autoresizingMask key="autoresizingMask"/>
@@ -191,6 +191,9 @@
             <point key="canvasLocation" x="140" y="22"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house.png" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
