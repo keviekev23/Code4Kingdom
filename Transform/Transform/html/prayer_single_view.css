@@ -102,6 +102,6 @@ body {
 }
 .footer{
 	bottom:0;
-	left:calc(50% - 50px);
+	
 	position: absolute;
 }
