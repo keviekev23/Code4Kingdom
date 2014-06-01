@@ -23,20 +23,6 @@ var Member = Parse.Object.extend("Member", {
   }
 });
 
-var Event = Parse.Object.extend("Event", {
-  initialize: function(time, location, organizer) {
-    this.set("time", time);
-    this.set("location", location);
-    this.set("organizer", organizer);
-    this.set("rsvp", []);
-  },
-
-  addAttendee: function(user_id) {
-    this.addUnique('rsvp', user_id);
-    this.save();
-  }
-})
-
 window.onload = function() {
   Parse.$ = jQuery;
   
@@ -47,33 +33,32 @@ window.onload = function() {
   loadPreviousPrayers();
 };
 
-function addEvent(time, location, organizer) {
-  var event = new Event();
-  event.initialize(time, location, organizer);
-  event.save();
-}
-
-function addPrayer(user_id, title, prayer_text, type) {
-  var prayer = new Prayer();
-  prayer.initialize(user_id, title, prayer_text, type);
-  prayer.save(null, {
-    success: function(prayer) {
-      console.log('saved prayer ' + prayer.get('title'));
-    },
-    error: function(prayer, error) {
-      console.log(error);
-    }
-  });
-
-  // Now update the individual member's prayer list.
-  var query = new Parse.Query(Member);
-  query.get(user_id, {
-    success: function(member) {
-      console.log('retrieved ' + member.get("name"));
-      member.addUnique("prayers", prayer);
-      member.save();
-    }
-  });
+function addPrayer() {
+    var form = document.forms["new-prayer"];
+    var user_id = "Ddw8VGKsZ1";
+    var title = form["title"].value;
+    var prayer_text = form["description"].value;
+    var type = form["prayer"].checked ? "prayer_request" : "praise_report";
+    var prayer = new Prayer();
+    prayer.initialize(user_id, title, prayer_text, type);
+    prayer.save(null, {
+                success: function(prayer) {
+                console.log('saved prayer ' + prayer.title);
+                },
+                error: function(prayer, error) {
+                console.log(error);
+                }
+                });
+    
+    // Now update the individual member's prayer list.
+    var query = new Parse.Query(Member);
+    query.get(user_id, {
+              success: function(member) {
+              console.log('retrieved ' + member.get("name"));
+              member.addUnique("prayers", prayer_text);
+              member.save();
+              }
+              });
 }
 
 function addMember(name, profile_url) {

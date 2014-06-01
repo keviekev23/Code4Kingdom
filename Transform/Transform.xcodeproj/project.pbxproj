@@ -49,10 +49,12 @@
 		0A6EDA24193A8F9C0072B28D /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6EDA23193A8F9C0072B28D /* JavaScriptCore.framework */; };
 		0AB229CB193A9C8600E58249 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB229CA193A9C8600E58249 /* house@2x.png */; };
 		0AB229CD193AA28E00E58249 /* pray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB229CC193AA28E00E58249 /* pray@2x.png */; };
+		0AB229D0193AB1A500E58249 /* grow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB229CE193AB1A500E58249 /* grow@2x.png */; };
+		0AB229D1193AB1A500E58249 /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB229CF193AB1A500E58249 /* profile@2x.png */; };
 		0AC96A60193A98B500584BF9 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC96A5F193A98B500584BF9 /* ProfileViewController.m */; };
 		0AC96A62193A993E00584BF9 /* profile.html in Resources */ = {isa = PBXBuildFile; fileRef = 0AC96A61193A993E00584BF9 /* profile.html */; };
 		1093C6DD0CAD406FA4CD979B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5929EC6AC34D8D871760F5 /* libPods.a */; };
-		D7E5579C193A7F750032DDB4 /* data_structure.js in Sources */ = {isa = PBXBuildFile; fileRef = D7E5579B193A7F750032DDB4 /* data_structure.js */; };
+		D7E5579C193A7F750032DDB4 /* data_structure.js in Resources */ = {isa = PBXBuildFile; fileRef = D7E5579B193A7F750032DDB4 /* data_structure.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		0A6EDA23193A8F9C0072B28D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		0AB229CA193A9C8600E58249 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
 		0AB229CC193AA28E00E58249 /* pray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pray@2x.png"; sourceTree = "<group>"; };
+		0AB229CE193AB1A500E58249 /* grow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grow@2x.png"; sourceTree = "<group>"; };
+		0AB229CF193AB1A500E58249 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@2x.png"; sourceTree = "<group>"; };
 		0AC96A5E193A98B500584BF9 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Transform/ProfileViewController.h; sourceTree = "<group>"; };
 		0AC96A5F193A98B500584BF9 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Transform/ProfileViewController.m; sourceTree = "<group>"; };
 		0AC96A61193A993E00584BF9 /* profile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = profile.html; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 		0AB229C9193A9C8600E58249 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				0AB229CE193AB1A500E58249 /* grow@2x.png */,
+				0AB229CF193AB1A500E58249 /* profile@2x.png */,
 				0AB229CC193AA28E00E58249 /* pray@2x.png */,
 				0AB229CA193A9C8600E58249 /* house@2x.png */,
 			);
@@ -402,6 +408,8 @@
 				0A6ED9FE193A465D0072B28D /* prayer.html in Resources */,
 				0A6ED9F2193A465D0072B28D /* bootstrap.css.map in Resources */,
 				0A6EDA1D193A7E980072B28D /* prayer_single_view.html in Resources */,
+				0AB229D0193AB1A500E58249 /* grow@2x.png in Resources */,
+				0AB229D1193AB1A500E58249 /* profile@2x.png in Resources */,
 				0A6ED9B219394C8F0072B28D /* Images.xcassets in Resources */,
 				0AB229CB193A9C8600E58249 /* house@2x.png in Resources */,
 				0A6ED9EE193A465D0072B28D /* bootstrap-theme.css in Resources */,
@@ -414,6 +422,7 @@
 				0A6EDA07193A63B70072B28D /* bootstrap.js in Resources */,
 				0A6EDA08193A63BB0072B28D /* bootstrap.min.js in Resources */,
 				0A6EDA22193A81FE0072B28D /* prayer_single_view.js in Resources */,
+				D7E5579C193A7F750032DDB4 /* data_structure.js in Resources */,
 				0A6EDA09193A63C10072B28D /* meetings.js in Resources */,
 				0A6EDA0A193A63C60072B28D /* prayer.js in Resources */,
 			);
@@ -467,7 +476,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E5579C193A7F750032DDB4 /* data_structure.js in Sources */,
 				0A6ED9D7193A43030072B28D /* PrayerRequestsViewController.m in Sources */,
 				0A6ED9B019394C8F0072B28D /* AppDelegate.m in Sources */,
 				0AC96A60193A98B500584BF9 /* ProfileViewController.m in Sources */,
