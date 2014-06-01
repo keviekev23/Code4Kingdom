@@ -46,3 +46,11 @@ function loadCurrentEvent() {
     }
   });
 }
+
+
+function attending() {
+  alert('attending!');
+}
+function notattending() {
+  alert('not Attending!');
+}
