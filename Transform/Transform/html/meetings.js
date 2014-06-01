@@ -15,6 +15,9 @@ var Event = Parse.Object.extend("Event", {
     this.save(null, {
 			success: function(event) {
 				nextEvent = event;
+				console.log(event.get("attendees").length + " attending");
+				document.getElementById("attend_button").innerHTML =
+          "Attending (" + event.get("attendees").length + ")";
 			},
 			error: function(event, error) {
 				alert('Failed to save your response: ' + error.description);
@@ -27,6 +30,9 @@ var Event = Parse.Object.extend("Event", {
 		this.save(null, {
 			success: function(event) {
 				nextEvent = event;
+				console.log(event.get("losers").length + " losers");
+				document.getElementById("loser_button").innerHTML =
+					"Not Attending (" + event.get("losers").length + ")";
 			},
 			error: function(event, error) {
 				alert('Failed to save your response: ' + error.description);
@@ -77,6 +83,10 @@ function loadCurrentEvent() {
   query.first({
     success: function(result) {
       nextEvent = result;
+			document.getElementById("attend_button").innerHTML =
+				"Attending (" + nextEvent.get("attendees").length + ")";
+			document.getElementById("loser_button").innerHTML =
+				"Not Attending (" + nextEvent.get("losers").length + ")";
     }
   });
 }
