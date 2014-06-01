@@ -23,20 +23,6 @@ var Member = Parse.Object.extend("Member", {
   }
 });
 
-var Event = Parse.Object.extend("Event", {
-  initialize: function(time, location, organizer) {
-    this.set("time", time);
-    this.set("location", location);
-    this.set("organizer", organizer);
-    this.set("rsvp", []);
-  },
-
-  addAttendee: function(user_id) {
-    this.addUnique('rsvp', user_id);
-    this.save();
-  }
-})
-
 window.onload = function() {
   Parse.$ = jQuery;
   
@@ -73,12 +59,6 @@ function addPrayer() {
               member.save();
               }
               });
-}
-
-function addEvent(time, location, organizer) {
-  var event = new Event();
-  event.initialize(time, location, organizer);
-  event.save();
 }
 
 function addMember(name, profile_url) {
