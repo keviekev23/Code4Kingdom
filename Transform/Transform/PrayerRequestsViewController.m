@@ -30,6 +30,8 @@
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    //[self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"alert(%@)", @"waef"]];
+    //[self.webView stringByEvaluatingJavaScriptFromString:@"loadPreviousPrayers();"];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType

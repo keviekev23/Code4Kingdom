@@ -94,7 +94,7 @@ function loadPreviousPrayers() {
 			$("#draggablePanelList").append(list)
 		},
 		error: function(error) {
-			alert("Error: " + error.message);
+			alert("Error code: " + error.code + ", message: " + error.message);
 		}
 	});
 }
