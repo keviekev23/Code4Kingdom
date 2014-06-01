@@ -26,7 +26,6 @@ jQuery(function($) {
 });
 
 function addPrayer() {
-    loadPreviousPrayers();
     var form = document.forms["new-prayer"];
     var title = form["title"].value;
     var prayer_text = form["description"].value;
