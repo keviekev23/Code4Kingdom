@@ -5,6 +5,7 @@ window.onload = function() {
     loadPrayer(currentPrayerID);
   }
   // Otherwise it's on iOS and we will have native chrome trigger loadPrayer.
+  loadCurrentUser();
 };
 
 function getParameterByName(name) {
@@ -28,6 +29,8 @@ function loadPrayer(id) {
         prayer.get("type");
       document.getElementById('user_profile').src =
         prayer.get("user_profile");
+      document.getElementById('date').innerHTML =
+        prayer.get("date");
       if (prayer.get("status") == "Open") {
         $("#open_button").css({"background-color":"#336699"});
         $("#answer_button").css({"background-color":"#5CB8E6"});
@@ -63,4 +66,11 @@ function updatePrayerStatus(status) {
       }
     }
   })
+}
+
+function prayForPrayer() {
+  var html = '<div class="comment"><div class="pic-container"><img class="comment-pic" src="' +
+    user_profile +
+    '" style="width:50px; height:50px;"/></div><div class="comment-text-container"><div class="comment-text">Prayed for you!</div></div></div>';
+  $("#comments").prepend(html);
 }

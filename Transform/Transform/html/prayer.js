@@ -1,11 +1,12 @@
-var user_id = "Ddw8VGKsZ1";
-var user_name;
-var user_profile;
-
 window.onload = function() {
-    parseInit();
-    loadCurrentUser();
-    loadPreviousPrayers();
+  parseInit();
+	/*
+	var user_profile = "https://lh4.googleusercontent.com/-8kaOPZVEi0o/AAAAAAAAAAI/AAAAAAAAHYY/oCwUWlFWZ_0/s180-c-k-no/photo.jpg";
+	var user_name = "Jean Tang";
+	addMember(user_name, user_profile);
+	*/
+  loadCurrentUser();
+  loadPreviousPrayers();
 };
 
 jQuery(function($) {
@@ -71,7 +72,7 @@ function injectPrayerHTML(prayer_obj) {
     opacity +
     ';"><div class="pic-container"><img class="pic" src="__USER_PIC_URL__" style="width:75px; height:75px;"/></div><div class="info-container"><li class="panel panel-info"><div class="panel-heading">' +
 		prayer_obj.get("type") +
-		'</div><div class="circle-indicator prayer-circle"><div class="new">NEW</div></div><a href="prayer_single_view.html?__PRAYER_ID__"><div class="panel-body">' +
+		'</div><a href="prayer_single_view.html?__PRAYER_ID__"><div class="panel-body">' +
 		prayer_obj.get("title") +
 		'</div></a></li></div></div>';
 
@@ -89,6 +90,7 @@ function injectPrayerHTML(prayer_obj) {
 
 function loadPreviousPrayers() {
 	var query = new Parse.Query(Prayer);
+	query.ascending('status');
 	query.find({
 		success: function(results) {
 			var list = "";
@@ -98,20 +100,10 @@ function loadPreviousPrayers() {
 					list = html + list;
 				}
 			}
-               $("#draggablePanelList").append(list);
+			$("#draggablePanelList").append(list);
 		},
 		error: function(error) {
 			alert("Error code: " + error.code + ", message: " + error.message);
-		}
-	});
-}
-
-function loadCurrentUser() {
-	var query = new Parse.Query(Member);
-	query.get(user_id, {
-		success: function(member) {
-			user_name = member.get("name");
-			user_profile = member.get("profile_url");
 		}
 	});
 }
