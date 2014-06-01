@@ -26,6 +26,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="IRN-We-vXb">
                         <barButtonItem key="rightBarButtonItem" systemItem="reply" id="1gd-Wp-gWt">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="shareAction:" destination="OL1-b3-jdM" id="2Ty-JO-ZK4"/>
                             </connections>

@@ -26,6 +26,8 @@
     
     UIColor *tintColor = [UIColor colorWithRed:92.0/255.0 green:184.0/255.0 blue:230.0/255.0 alpha:1.0];
     self.navigationController.navigationBar.barTintColor = tintColor;
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], UITextAttributeTextColor, nil] forState:UIControlStateNormal];
     self.navigationController.navigationBar.translucent = NO;
     self.tabBarController.tabBar.tintColor = tintColor;
 }
