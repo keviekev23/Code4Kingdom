@@ -107,13 +107,3 @@ function loadPreviousPrayers() {
 		}
 	});
 }
-
-function loadCurrentUser() {
-	var query = new Parse.Query(Member);
-	query.get(user_id, {
-		success: function(member) {
-			user_name = member.get("name");
-			user_profile = member.get("profile_url");
-		}
-	});
-}
