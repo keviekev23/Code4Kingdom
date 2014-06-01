@@ -3,16 +3,16 @@ function popup() {
 }
 
 window.onload = function() {
- //  	var divs = document.getElementsByTagName("div");
-	// for(var i = 0; i < divs.length; i++){
-	//    	//do something to each div like
-	//    	if(divs[i].className == "circle-indicator prayer-circle"){
-	// 		divs[i].style.backgroundColor = "#F5DA81";
-	//    	}
-	//    	if(divs[i].className == "circle-indicator praise-circle"){
-	// 		divs[i].style.backgroundColor = "#99FF66";
-	//    	}
-	// }
+  	var divs = document.getElementsByTagName("div");
+	for(var i = 0; i < divs.length; i++){
+	   	//do something to each div like
+	   	if(divs[i].className == "circle-indicator prayer-circle"){
+			divs[i].style.backgroundColor = "#DF0101";
+	   	}
+	   	if(divs[i].className == "circle-indicator praise-circle"){
+			divs[i].style.backgroundColor = "#99FF66";
+	   	}
+	}
 };
 
 jQuery(function($) {

@@ -125,7 +125,7 @@ a:hover
 	height:82.5px;
 }
 .circle-indicator{
-	background-color: #fff;	
+/*	background-color: yellow;*/	
 	height: 18.75px;
 	width: 18.75px;
 	border-radius: 15.625px;
@@ -133,9 +133,7 @@ a:hover
 	margin-right: 6.25px;
 	margin-top: -25.5px;
 }
-.circle-indicator .poop {
-	margin-left: 6px;
-}
+
 #addPrayerRequest{
 	position:relative;
 	left: calc(50% - 70px);
