@@ -1,4 +1,5 @@
 var previousPrayerRequests = [];
+var user_id = "Ddw8VGKsZ1";
 
 var Prayer = Parse.Object.extend("Prayer", {
   initialize: function(user_id, title, prayer_text, type) {
@@ -35,7 +36,6 @@ window.onload = function() {
 
 function addPrayer() {
     var form = document.forms["new-prayer"];
-    var user_id = "Ddw8VGKsZ1";
     var title = form["title"].value;
     var prayer_text = form["description"].value;
     var type = form["prayer"].checked ? "prayer_request" : "praise_report";

@@ -1,4 +1,5 @@
-var nextEvent;
+var nextEvent = null;
+var user_id = "Ddw8VGKsZ1";
 
 var Event = Parse.Object.extend("Event", {
   initialize: function(time, location, organizer) {
@@ -46,6 +47,14 @@ window.onload = function() {
                    "ZiGuizOBCP3JK8TKqHhnWzzQLhO6Ym9iJOFJWP2F");
   
   loadCurrentEvent();
+}
+
+function addAttendee() {
+  nextEvent.addAttendee(user_id);
+}
+
+function addLoser() {
+  nextEvent.addLoser(user_id);
 }
 
 function addEvent(time, location, organizer) {
