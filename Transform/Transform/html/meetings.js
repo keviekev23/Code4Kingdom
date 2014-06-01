@@ -75,6 +75,15 @@ function loadCurrentEvent() {
   });
 }
 
+
+
+function attending() {
+  alert('attending!');
+}
+function notattending() {
+  alert('not Attending!');
+}
+
 function getNumberOfAttendees() {
 	return nextEvent.get("attendees").length;
 }
