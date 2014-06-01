@@ -61,8 +61,12 @@ function addPrayer() {
 }
 
 function injectPrayerHTML(prayer_obj) {
-    var html = '<div class="content-container"><div class="pic-container"><img class="pic" src="__USER_PIC_URL__" style="width:75px; height:75px;"/></div><div class="info-container"><li class="panel panel-info"><div class="panel-heading">PRAYER REQUEST</div><div class="circle-indicator prayer-circle"><div class="new">NEW</div></div><a href="prayer_single_view.html/__USER_ID__"><div class="panel-body">My mom is in the hospital</div></a></li></div></div>';
-    
+  var html = '<div class="content-container"><div class="pic-container"><img class="pic" src="__USER_PIC_URL__" style="width:75px; height:75px;"/></div><div class="info-container"><li class="panel panel-info"><div class="panel-heading">' +
+		prayer_obj.get("type") +
+		'</div><div class="circle-indicator prayer-circle"><div class="new">NEW</div></div><a href="prayer_single_view.html/__USER_ID__"><div class="panel-body">' +
+		prayer_obj.get("title") +
+		'</div></a></li></div></div>';
+
     var pic_url = prayer_obj.get("user_profile");
     if (pic_url) {
         html = html.replace("__USER_PIC_URL__", prayer_obj.get("user_profile"));
@@ -76,22 +80,22 @@ function injectPrayerHTML(prayer_obj) {
 }
 
 function loadPreviousPrayers() {
-    var query = new Parse.Query(Prayer);
-    query.find({
-               success: function(results) {
-               var list = "";
-               for (var i = 0; i < results.length; i++) {
-               var html = injectPrayerHTML(results[i]);
-               if (html) {
-                    list += html;
-               }
-               }
-               $("#draggablePanelList").append(list)
-               },
-               error: function(results) {
-               alert("got an error");
-               }
-               });
+	var query = new Parse.Query(Prayer);
+	query.find({
+		success: function(results) {
+			var list = "";
+			for (var i = 0; i < results.length; i++) {
+				var html = injectPrayerHTML(results[i]);
+				if (html) {
+					list += html;
+				}
+			}
+			$("#draggablePanelList").append(list)
+		},
+		error: function(results, error) {
+			alert("Error: " + error);
+		}
+	});
 }
 
 function loadCurrentUser() {
