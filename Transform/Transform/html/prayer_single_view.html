@@ -2,20 +2,91 @@
 <html>
 
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-	<script type="text/javascript" src="prayer.js"></script> 
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel='stylesheet' href='prayer.css'>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<script type="text/javascript" src="prayer.js"></script>
+    
+  	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel='stylesheet' href='prayer_single_view.css'>
 </head>
 
 <body>
-	<div id="test" onclick="popup()"> PRAYER SINGLE VIEW! </div>
+
+<div class="head-container">
+	<div class="head-img">
+		<img class="pic" src="https://media.licdn.com/media/p/1/000/1e5/28c/131e6bc.jpg" style="width:75px; height:75px;"/>
+	</div>
+	<div class="head-info">
+		<div class="head-info-top">
+			PRAYER REQUEST
+		</div>
+		<div class="head-info-bottom">
+			status:
+			<a class="btn btn-sml btn-primary" href="#" role="button" style="background-color:#74DF00;border:1px solid white; border-radius:4px; height:25px;line-height : 10px;">Open</a>
+			<a class="btn btn-sml btn-primary" href="#" role="button" style="background-color:#5CB8E6;border:1px solid white; border-radius:4px; height:25px;line-height : 10px;">Answered</a>
+		</div>
+		<div class="circle-indicator praise-circle"> </div>
+	</div>
+
+</div>
+
+<div class="body-container">
+	<div class="body-title">
+		Pray for my mom! 
+	</div>
+
+	<div class="body-text">
+		She got sick earlier this week so please pray that she gets better!
+	</div>
+
+	<div class="body-footer">
+		May 31, 2014
+	</div>
+</div>
+
+<div class="comments-container">
 
 
+	<div class="comment">
+		<div class="pic-container">
+			<img class="comment-pic" src="https://scontent-a-iad.xx.fbcdn.net/hphotos-xfa1/t31.0-8/892676_10154055747430648_6477469356863126644_o.jpg" style="width:50px; height:50px;"/>
+		</div>
+		<div class="comment-text-container">
+			<div class="comment-text">
+				I'll be praying for her!
+			</div>
+		</div> 
+	</div>
+
+	<div class="comment">
+		<div class="pic-container">
+			<img class="comment-pic" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn2/t1.0-9/983713_10200778803063872_781309934_n.jpg" style="width:50px; height:50px;"/>
+		</div>
+		<div class="comment-text-container">
+			<div class="comment-text">
+				I will try to visit this weekend :)
+			</div>
+		</div> 
+	</div>
+
+</div>
 
 
+<!-- INSERT COMMENT BUTTON HERE --> 
+<div class="footer">
+<a class="btn btn-sml btn-primary" id="addPrayerRequest" href="#" role="button" style="background-color:#5CB8E6;border:1px solid white; border-radius:4px; margin-bottom:10px;margin-top:10px;position:relative;left:calc(50% - 50px);">+ Add Comment</a>
+</div>
 </body>
 
 
 </html>
+
+
+<!-- TO INSERT A JAVASCRIPT FUNCTION INTO HTML CODE: 
+
+
+	<script type="text/javascript">document.write(variable);</script>
+
+
+	-->

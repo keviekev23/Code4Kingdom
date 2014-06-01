@@ -7,6 +7,7 @@
 //
 
 #import "PrayerRequestsViewController.h"
+#import "PrayerDetailViewController.h"
 
 @interface PrayerRequestsViewController ()
 
@@ -23,11 +24,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self loadCurrentLocalUrl:@"prayer"];
+    
+    self.title = @"Prayers & Praise";
 }
 
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {    
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSArray *pathComponents = request.URL.pathComponents;
+    NSString *file = [pathComponents objectAtIndex:pathComponents.count-2];
+    NSUInteger rangeLocation = [file rangeOfString:@"."].location;
+    if (rangeLocation != NSNotFound) {
+        NSString *fileName = [file substringWithRange:NSMakeRange(0, [file rangeOfString:@"."].location)];
+        if ([fileName isEqualToString:@"prayer_single_view"]) {
+            PrayerDetailViewController *vc = (PrayerDetailViewController *)[[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([PrayerDetailViewController class])];
+            vc.prayerId = [[pathComponents objectAtIndex:pathComponents.count-1] integerValue];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        return NO;
+    }
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning

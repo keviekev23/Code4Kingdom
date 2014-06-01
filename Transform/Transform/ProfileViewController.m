@@ -1,27 +1,27 @@
 //
-//  GatherViewController.m
+//  ProfileViewController.m
 //  Transform
 //
 //  Created by Kevin Liang on 5/31/14.
 //  Copyright (c) 2014 Code4Kingdom. All rights reserved.
 //
 
-#import "GatherViewController.h"
+#import "ProfileViewController.h"
 
-@interface GatherViewController ()
+@interface ProfileViewController ()
 
 @end
 
-@implementation GatherViewController
+@implementation ProfileViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self loadCurrentLocalUrl:@"meetings"];
+    [self loadCurrentLocalUrl:@"profile"];
     
-    self.title = @"Gather";
+    self.title = @"Me";
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
