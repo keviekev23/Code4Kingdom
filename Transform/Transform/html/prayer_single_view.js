@@ -28,6 +28,8 @@ function loadPrayer(id) {
         prayer.get("type");
       document.getElementById('user_profile').src =
         prayer.get("user_profile");
+      document.getElementById('date').innerHTML =
+        prayer.get("date");
       if (prayer.get("status") == "Open") {
         $("#open_button").css({"background-color":"#336699"});
         $("#answer_button").css({"background-color":"#5CB8E6"});
