@@ -63,7 +63,7 @@ function addPrayer() {
 }
 
 function injectPrayerHTML(prayer_obj) {
-    var html = '<div class="content-container"><div class="pic-container"><img class="pic" src="__USER_PIC_URL__" style="width:75px; height:75px;"/></div><div class="info-container"><li class="panel panel-info"><div class="panel-heading">PRAYER REQUEST</div><div class="circle-indicator prayer-circle"><div class="poop">5</div></div><a href="prayer_single_view.html/__USER_ID__"><div class="panel-body">My mom is in the hospital</div></a></li></div></div>';
+    var html = '<div class="content-container"><div class="pic-container"><img class="pic" src="__USER_PIC_URL__" style="width:75px; height:75px;"/></div><div class="info-container"><li class="panel panel-info"><div class="panel-heading">PRAYER REQUEST</div><div class="circle-indicator prayer-circle"><div class="new">NEW</div></div><a href="prayer_single_view.html/__USER_ID__"><div class="panel-body">My mom is in the hospital</div></a></li></div></div>';
     
     html = html.replace("__USER_PIC_URL__", prayer_obj.get("profile_url"));
     html = html.replace("__USER_ID__", prayer_obj.get("user"));
