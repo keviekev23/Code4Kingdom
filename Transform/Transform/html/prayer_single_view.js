@@ -1,3 +1,4 @@
+var currentPrayerID = '7Z6hHJp4yk';
 window.onload = function() {
   Parse.$ = jQuery;
   
@@ -5,7 +6,7 @@ window.onload = function() {
   Parse.initialize("tK9bW3HzysojL4fxbjjj2H1zCT81JuyW1s6x02Vr",
                    "ZiGuizOBCP3JK8TKqHhnWzzQLhO6Ym9iJOFJWP2F");
   
-  loadPrayer('7Z6hHJp4yk');
+  loadPrayer(currentPrayerID);
 };
 
 function loadPrayer(id) {
@@ -21,8 +22,37 @@ function loadPrayer(id) {
             console.log(prayer.get("status"));
       if (prayer.get("status") == "Open") {
         $("#open_button").css({"background-color":"#336699"});
+        $("#answer_button").css({"background-color":"#5CB8E6"});
       } else if (prayer.get("status") == "Answered") {
-        $("#answer_button").css({"background-color":"#336699"});      }
+        $("#open_button").css({"background-color":"#5CB8E6"});
+        $("#answer_button").css({"background-color":"#336699"});
+      }
     }
   });
+}
+
+function openPrayer() {
+  updatePrayerStatus("Open");
+}
+
+function answerPrayer() {
+  updatePrayerStatus("Answered");
+}
+
+function updatePrayerStatus(status) {
+  console.log(status);
+  var query = new Parse.Query(Prayer);
+  query.get(currentPrayerID, {
+    success: function(prayer) {
+      prayer.set("status", status);
+      prayer.save();
+      if (status == "Open") {
+        $("#open_button").css({"background-color":"#336699"});
+        $("#answer_button").css({"background-color":"#5CB8E6"});
+      } else if (prayer.get("status") == "Answered") {
+        $("#open_button").css({"background-color":"#5CB8E6"});
+        $("#answer_button").css({"background-color":"#336699"});
+      }
+    }
+  })
 }
