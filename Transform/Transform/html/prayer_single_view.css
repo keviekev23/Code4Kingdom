@@ -41,14 +41,41 @@ body {
 	margin-top: 7.5px;
 	margin-left:15px;
 	margin-right:15px;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 	padding: 0px 10px;
 	padding-bottom: 20px;
 }
 
 .comments-container{
-	height: 150px;
-	border: 1px solid blue;
+	margin-left: 35px;
+}
+.comment-text-container{
+	background-color: #fff;
+	height:50px;
+	margin-top: 12.5px;
+	margin-bottom: 12.5px;
+	margin-right: 15px;
+	border-radius:5px;
+	color:#5CB8E6;
+}
+.comment-pic{
+	margin:12.5px;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+	border-radius:7.5px;
+	float:left;
+}
+.comment-text-container{
+	margin-left:75px;
+}
+.comment-text{
+	height:100%;
+	margin-top:7.5px;
+	margin-left: 7.5px;
+}
+.pic-container{
+	border:1px solid #5CB8E6;
 }
 .pic{
 	margin:12.5px;
@@ -72,4 +99,9 @@ body {
 	height: 100%;
 	font-size: 12px;
 	float:right;
+}
+.footer{
+	bottom:0;
+	left:calc(50% - 50px);
+	position: absolute;
 }
