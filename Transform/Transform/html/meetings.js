@@ -5,13 +5,33 @@ var Event = Parse.Object.extend("Event", {
     this.set("time", time);
     this.set("location", location);
     this.set("organizer", organizer);
-    this.set("rsvp", []);
+    this.set("attendees", []);
+		this.set("losers", []);
   },
 
   addAttendee: function(user_id) {
-    this.addUnique('rsvp', user_id);
-    this.save();
-  }
+    this.addUnique('attendees', user_id);
+    this.save(null, {
+			success: function(event) {
+				nextEvent = event;
+			},
+			error: function(event, error) {
+				alert('Failed to save your response: ' + error.description);
+			}
+		});
+  },
+
+	addLoser: function(user_id) {
+		this.addUnique('losers', user_id);
+		this.save(null, {
+			success: function(event) {
+				nextEvent = event;
+			},
+			error: function(event, error) {
+				alert('Failed to save your response: ' + error.description);
+			}
+		});
+	}
 })
 
 function popup() {
@@ -42,7 +62,14 @@ function loadCurrentEvent() {
   query.first({
     success: function(result) {
       nextEvent = result;
-			console.log(result.get('time'));
     }
   });
+}
+
+function getNumberOfAttendees() {
+	return nextEvent.get("attendees").length;
+}
+
+function getNumberOfLosers() {
+	return nextEvent.get("losers").length;
 }
