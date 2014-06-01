@@ -16,9 +16,6 @@
 
 @implementation PrayerRequestsViewController
 
-
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,11 +23,14 @@
     [self loadCurrentLocalUrl:@"prayer"];
     
     self.title = @"Prayers & Praise";
+    
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self.webView selector:@selector(reload) userInfo:nil repeats:YES];
 }
 
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView
-{    
+{
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"alert(%@)", @"waef"]];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
