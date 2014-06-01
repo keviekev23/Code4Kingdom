@@ -35,8 +35,6 @@
 		0A6ED9FB193A465D0072B28D /* meetings.html in Resources */ = {isa = PBXBuildFile; fileRef = 0A6ED9E9193A465D0072B28D /* meetings.html */; };
 		0A6ED9FD193A465D0072B28D /* prayer.css in Resources */ = {isa = PBXBuildFile; fileRef = 0A6ED9EB193A465D0072B28D /* prayer.css */; };
 		0A6ED9FE193A465D0072B28D /* prayer.html in Resources */ = {isa = PBXBuildFile; fileRef = 0A6ED9EC193A465D0072B28D /* prayer.html */; };
-		0A6EDA07193A63B70072B28D /* bootstrap.js in Resources */ = {isa = PBXBuildFile; fileRef = 0A6ED9E6193A465D0072B28D /* bootstrap.js */; };
-		0A6EDA08193A63BB0072B28D /* bootstrap.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0A6ED9E7193A465D0072B28D /* bootstrap.min.js */; };
 		0A6EDA09193A63C10072B28D /* meetings.js in Resources */ = {isa = PBXBuildFile; fileRef = 0A6ED9EA193A465D0072B28D /* meetings.js */; };
 		0A6EDA0A193A63C60072B28D /* prayer.js in Resources */ = {isa = PBXBuildFile; fileRef = 0A6ED9ED193A465D0072B28D /* prayer.js */; };
 		0A6EDA12193A710B0072B28D /* GatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EDA11193A710B0072B28D /* GatherViewController.m */; };
@@ -47,6 +45,8 @@
 		0A6EDA21193A80910072B28D /* MainNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EDA20193A80910072B28D /* MainNavigationViewController.m */; };
 		0A6EDA22193A81FE0072B28D /* prayer_single_view.js in Resources */ = {isa = PBXBuildFile; fileRef = 0A6EDA1B193A7E980072B28D /* prayer_single_view.js */; };
 		0A6EDA24193A8F9C0072B28D /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6EDA23193A8F9C0072B28D /* JavaScriptCore.framework */; };
+		0A84C68F193AFFEE0018883C /* bootstrap.js in Resources */ = {isa = PBXBuildFile; fileRef = 0A84C68D193AFFEE0018883C /* bootstrap.js */; };
+		0A84C690193AFFEE0018883C /* parse-1.2.18.js in Resources */ = {isa = PBXBuildFile; fileRef = 0A84C68E193AFFEE0018883C /* parse-1.2.18.js */; };
 		0AB229CB193A9C8600E58249 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB229CA193A9C8600E58249 /* house@2x.png */; };
 		0AB229CD193AA28E00E58249 /* pray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB229CC193AA28E00E58249 /* pray@2x.png */; };
 		0AB229D0193AB1A500E58249 /* grow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB229CE193AB1A500E58249 /* grow@2x.png */; };
@@ -104,14 +104,12 @@
 		0A6ED9E2193A465D0072B28D /* glyphicons-halflings-regular.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "glyphicons-halflings-regular.svg"; sourceTree = "<group>"; };
 		0A6ED9E3193A465D0072B28D /* glyphicons-halflings-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.ttf"; sourceTree = "<group>"; };
 		0A6ED9E4193A465D0072B28D /* glyphicons-halflings-regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.woff"; sourceTree = "<group>"; };
-		0A6ED9E6193A465D0072B28D /* bootstrap.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bootstrap.js; sourceTree = "<group>"; };
-		0A6ED9E7193A465D0072B28D /* bootstrap.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bootstrap.min.js; sourceTree = "<group>"; };
 		0A6ED9E8193A465D0072B28D /* meetings.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = meetings.css; sourceTree = "<group>"; };
 		0A6ED9E9193A465D0072B28D /* meetings.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = meetings.html; sourceTree = "<group>"; };
-		0A6ED9EA193A465D0072B28D /* meetings.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = meetings.js; sourceTree = "<group>"; };
+		0A6ED9EA193A465D0072B28D /* meetings.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = meetings.js; path = ../meetings.js; sourceTree = "<group>"; };
 		0A6ED9EB193A465D0072B28D /* prayer.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = prayer.css; sourceTree = "<group>"; };
 		0A6ED9EC193A465D0072B28D /* prayer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = prayer.html; sourceTree = "<group>"; };
-		0A6ED9ED193A465D0072B28D /* prayer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = prayer.js; sourceTree = "<group>"; };
+		0A6ED9ED193A465D0072B28D /* prayer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = prayer.js; path = ../prayer.js; sourceTree = "<group>"; };
 		0A6EDA10193A710B0072B28D /* GatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatherViewController.h; path = Transform/GatherViewController.h; sourceTree = "<group>"; };
 		0A6EDA11193A710B0072B28D /* GatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GatherViewController.m; path = Transform/GatherViewController.m; sourceTree = "<group>"; };
 		0A6EDA13193A71DC0072B28D /* WebContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebContentViewController.h; path = Transform/WebContentViewController.h; sourceTree = "<group>"; };
@@ -120,10 +118,12 @@
 		0A6EDA17193A7CF20072B28D /* PrayerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrayerDetailViewController.m; path = Transform/PrayerDetailViewController.m; sourceTree = "<group>"; };
 		0A6EDA19193A7E980072B28D /* prayer_single_view.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = prayer_single_view.css; sourceTree = "<group>"; };
 		0A6EDA1A193A7E980072B28D /* prayer_single_view.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = prayer_single_view.html; sourceTree = "<group>"; };
-		0A6EDA1B193A7E980072B28D /* prayer_single_view.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = prayer_single_view.js; sourceTree = "<group>"; };
+		0A6EDA1B193A7E980072B28D /* prayer_single_view.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = prayer_single_view.js; path = ../prayer_single_view.js; sourceTree = "<group>"; };
 		0A6EDA1F193A80910072B28D /* MainNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainNavigationViewController.h; path = Transform/MainNavigationViewController.h; sourceTree = "<group>"; };
 		0A6EDA20193A80910072B28D /* MainNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainNavigationViewController.m; path = Transform/MainNavigationViewController.m; sourceTree = "<group>"; };
 		0A6EDA23193A8F9C0072B28D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		0A84C68D193AFFEE0018883C /* bootstrap.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = bootstrap.js; path = Transform/html/bootstrap.js; sourceTree = SOURCE_ROOT; };
+		0A84C68E193AFFEE0018883C /* parse-1.2.18.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "parse-1.2.18.js"; path = "Transform/html/parse-1.2.18.js"; sourceTree = SOURCE_ROOT; };
 		0AB229CA193A9C8600E58249 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
 		0AB229CC193AA28E00E58249 /* pray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pray@2x.png"; sourceTree = "<group>"; };
 		0AB229CE193AB1A500E58249 /* grow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grow@2x.png"; sourceTree = "<group>"; };
@@ -132,16 +132,16 @@
 		0AB229D3193ADF5D00E58249 /* GrowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GrowViewController.m; path = Transform/GrowViewController.m; sourceTree = "<group>"; };
 		0AB229D5193AE02700E58249 /* grow.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = grow.css; sourceTree = "<group>"; };
 		0AB229D6193AE02700E58249 /* grow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = grow.html; sourceTree = "<group>"; };
-		0AB229D7193AE02700E58249 /* grow.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = grow.js; sourceTree = "<group>"; };
+		0AB229D7193AE02700E58249 /* grow.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = grow.js; path = ../grow.js; sourceTree = "<group>"; };
 		0AC96A5E193A98B500584BF9 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Transform/ProfileViewController.h; sourceTree = "<group>"; };
 		0AC96A5F193A98B500584BF9 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Transform/ProfileViewController.m; sourceTree = "<group>"; };
 		0AC96A61193A993E00584BF9 /* profile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = profile.html; sourceTree = "<group>"; };
 		29AB98E3193AE80E00361A8E /* profile.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = profile.css; sourceTree = "<group>"; };
-		29AB98E4193AE80E00361A8E /* profile.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = profile.js; sourceTree = "<group>"; };
+		29AB98E4193AE80E00361A8E /* profile.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = profile.js; path = ../profile.js; sourceTree = "<group>"; };
 		29AB98E7193AEE1800361A8E /* book_icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = book_icon_72.png; path = Transform/html/book_icon_72.png; sourceTree = SOURCE_ROOT; };
 		42A1168A299C469AA21AA34E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AA5929EC6AC34D8D871760F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7E5579B193A7F750032DDB4 /* data_structure.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = data_structure.js; sourceTree = "<group>"; };
+		D7E5579B193A7F750032DDB4 /* data_structure.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = data_structure.js; path = ../data_structure.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,20 +255,14 @@
 				0A6ED9E5193A465D0072B28D /* js */,
 				0A6ED9E8193A465D0072B28D /* meetings.css */,
 				0A6ED9E9193A465D0072B28D /* meetings.html */,
-				0A6ED9EA193A465D0072B28D /* meetings.js */,
 				0AB229D5193AE02700E58249 /* grow.css */,
 				0AB229D6193AE02700E58249 /* grow.html */,
-				0AB229D7193AE02700E58249 /* grow.js */,
 				0A6EDA19193A7E980072B28D /* prayer_single_view.css */,
 				0A6EDA1A193A7E980072B28D /* prayer_single_view.html */,
-				0A6EDA1B193A7E980072B28D /* prayer_single_view.js */,
 				0A6ED9EB193A465D0072B28D /* prayer.css */,
 				0A6ED9EC193A465D0072B28D /* prayer.html */,
-				0A6ED9ED193A465D0072B28D /* prayer.js */,
-				D7E5579B193A7F750032DDB4 /* data_structure.js */,
 				0AC96A61193A993E00584BF9 /* profile.html */,
 				29AB98E3193AE80E00361A8E /* profile.css */,
-				29AB98E4193AE80E00361A8E /* profile.js */,
 			);
 			name = html;
 			path = Transform/html;
@@ -322,8 +316,14 @@
 		0A6ED9E5193A465D0072B28D /* js */ = {
 			isa = PBXGroup;
 			children = (
-				0A6ED9E6193A465D0072B28D /* bootstrap.js */,
-				0A6ED9E7193A465D0072B28D /* bootstrap.min.js */,
+				0A6ED9EA193A465D0072B28D /* meetings.js */,
+				0AB229D7193AE02700E58249 /* grow.js */,
+				0A6ED9ED193A465D0072B28D /* prayer.js */,
+				0A6EDA1B193A7E980072B28D /* prayer_single_view.js */,
+				0A84C68D193AFFEE0018883C /* bootstrap.js */,
+				0A84C68E193AFFEE0018883C /* parse-1.2.18.js */,
+				29AB98E4193AE80E00361A8E /* profile.js */,
+				D7E5579B193A7F750032DDB4 /* data_structure.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
@@ -420,6 +420,8 @@
 			files = (
 				0A6ED9FD193A465D0072B28D /* prayer.css in Resources */,
 				0A6ED9FB193A465D0072B28D /* meetings.html in Resources */,
+				0A84C690193AFFEE0018883C /* parse-1.2.18.js in Resources */,
+				0A84C68F193AFFEE0018883C /* bootstrap.js in Resources */,
 				0A6ED9F3193A465D0072B28D /* bootstrap.min.css in Resources */,
 				0A6ED9EF193A465D0072B28D /* bootstrap-theme.css.map in Resources */,
 				29AB98E6193AE80E00361A8E /* profile.js in Resources */,
@@ -445,8 +447,6 @@
 				0A6ED9CF193A400B0072B28D /* Storyboard.storyboard in Resources */,
 				0AC96A62193A993E00584BF9 /* profile.html in Resources */,
 				0A6ED9FA193A465D0072B28D /* meetings.css in Resources */,
-				0A6EDA07193A63B70072B28D /* bootstrap.js in Resources */,
-				0A6EDA08193A63BB0072B28D /* bootstrap.min.js in Resources */,
 				0A6EDA22193A81FE0072B28D /* prayer_single_view.js in Resources */,
 				29AB98E5193AE80E00361A8E /* profile.css in Resources */,
 				D7E5579C193A7F750032DDB4 /* data_structure.js in Resources */,
