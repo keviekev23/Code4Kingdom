@@ -50,10 +50,16 @@ window.onload = function() {
 }
 
 function addAttendee() {
+	if (nextEvent == null) {
+		alert('next event has not finished loading');
+	}
   nextEvent.addAttendee(user_id);
 }
 
 function addLoser() {
+	if (nextEvent == null) {
+		alert('next event has not finished loading');
+	}
   nextEvent.addLoser(user_id);
 }
 
@@ -73,15 +79,6 @@ function loadCurrentEvent() {
       nextEvent = result;
     }
   });
-}
-
-
-
-function attending() {
-  alert('attending!');
-}
-function notattending() {
-  alert('not Attending!');
 }
 
 function getNumberOfAttendees() {
