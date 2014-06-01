@@ -29,7 +29,7 @@ function addPrayer() {
     var form = document.forms["new-prayer"];
     var title = form["title"].value;
     var prayer_text = form["description"].value;
-    var type = form["prayer"].checked ? "prayer_request" : "praise_report";
+    var type = form["prayer"].checked ? "Prayer Request" : "Praise Report";
     var prayer = new Prayer();
     prayer.initialize(user_id, user_name, user_profile, title, prayer_text, type);
     prayer.save(null, {
