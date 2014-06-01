@@ -10,6 +10,6 @@
 
 @interface PrayerDetailViewController : WebContentViewController
 
-@property (nonatomic) NSUInteger prayerId;
+@property (nonatomic, strong) NSString *prayerId;
 
 @end

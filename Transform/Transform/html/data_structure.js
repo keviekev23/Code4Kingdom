@@ -7,6 +7,7 @@ var Prayer = Parse.Object.extend("Prayer", {
     this.set("title", title);
     this.set("content", prayer_text);
     this.set("type", type);
+    this.set("status", type == "Prayer Request" ? "Open" : "");
     this.set("responses", []);
   },
 
@@ -26,7 +27,7 @@ var Member = Parse.Object.extend("Member", {
 
 window.onload = function() {
   Parse.$ = jQuery;
-  
+
   // Initialize Parse with your Parse application javascript keys
   Parse.initialize("tK9bW3HzysojL4fxbjjj2H1zCT81JuyW1s6x02Vr",
                    "ZiGuizOBCP3JK8TKqHhnWzzQLhO6Ym9iJOFJWP2F");
@@ -38,7 +39,7 @@ function addPrayer() {
     var form = document.forms["new-prayer"];
     var title = form["title"].value;
     var prayer_text = form["description"].value;
-    var type = form["prayer"].checked ? "prayer_request" : "praise_report";
+    var type = form["prayer"].checked ? "Prayer Request" : "Praise Report";
     var prayer = new Prayer();
     prayer.initialize(user_id, title, prayer_text, type);
     prayer.save(null, {

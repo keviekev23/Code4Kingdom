@@ -32,10 +32,3 @@ jQuery(function($) {
         }
     });
 });
-
-function selectItem(number) {
-	var currURL = window.location.toString();
-	var newURL = currURL.replace("prayer.html","prayer_single_view.html");
-	window.location = newURL;
-	//window.location(currURL.replace('prayer.html','prayer_single_view.html');
-}
