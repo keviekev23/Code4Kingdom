@@ -46,11 +46,7 @@ function popup() {
 }
 
 window.onload = function() {
-  Parse.$ = jQuery;
-  
-  // Initialize Parse with your Parse application javascript keys
-  Parse.initialize("tK9bW3HzysojL4fxbjjj2H1zCT81JuyW1s6x02Vr",
-                   "ZiGuizOBCP3JK8TKqHhnWzzQLhO6Ym9iJOFJWP2F");
+    parseInit();
   
   loadCurrentEvent();
 }
