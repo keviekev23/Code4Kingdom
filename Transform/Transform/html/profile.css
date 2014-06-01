@@ -16,6 +16,10 @@ body {
 	margin-left:100px;
 	margin:25px;
 }
+.head-info-small{
+	margin-left:100px;
+	margin:25px;
+}
 .head-info-top{
 	font-size: 20px;
 }
@@ -32,7 +36,14 @@ body {
 	margin-top:1px;
 }
 
-
+.Title{
+	color:white;
+	text-align: center;
+	font-weight: 600;
+	font-size: 25px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
 .body-container{
 	height:100%;
 	color:#5CB8E6;
@@ -44,10 +55,11 @@ body {
 	margin-bottom: 5px;
 	padding: 0px 10px;
 	padding-bottom: 20px;
+
+	margin-left:75px;
 }
 
 .comments-container{
-	margin-left: 35px;
 }
 .comment-text-container{
 	background-color: #fff;
@@ -92,13 +104,15 @@ body {
 	font-weight:600;
 }
 .body-text{
+	padding-top: 5px;
 	height: 100%;
-	font-size: 15px;
+	font-size: 17.5px;
 }
 .body-footer{
 	height: 100%;
-	font-size: 12px;
+	font-size: 15px;
 	float:right;
+	margin-bottom: 10px;
 }
 .footer{
 	bottom:0;

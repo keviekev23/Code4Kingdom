@@ -28,8 +28,6 @@
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-  NSLog(self.prayerId);
-  [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"loadPrayer(%@)", self.prayerId]];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
