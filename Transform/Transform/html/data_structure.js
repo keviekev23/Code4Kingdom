@@ -2,8 +2,10 @@ var previousPrayerRequests = [];
 var user_id = "Ddw8VGKsZ1";
 
 var Prayer = Parse.Object.extend("Prayer", {
-  initialize: function(user_id, title, prayer_text, type) {
+  initialize: function(user_id, user_name, user_profile, title, prayer_text, type) {
     this.set("user", user_id);
+    this.set("user_name", user_name);
+    this.set("user_profile", user_profile);
     this.set("title", title);
     this.set("content", prayer_text);
     this.set("type", type);
