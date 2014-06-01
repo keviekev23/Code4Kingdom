@@ -14,3 +14,22 @@ a:hover
     text-decoration:none; 
     cursor:pointer;  
 }
+#attend_button, #loser_button{
+	width: 150px;
+	height: 30px;
+	font-size: 15px;
+	color:#fff;
+	background-color: #5CB8E6;
+	border:1px solid white;
+	border-radius:4px;
+}
+#invite_someone{
+	margin-top:8px;
+	width: 303px;
+	height: 30px;
+	font-size: 15px;
+	color:#fff;
+	background-color: #5CB8E6;
+	border:1px solid white;
+	border-radius:4px;
+}
