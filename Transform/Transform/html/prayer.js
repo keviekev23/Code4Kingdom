@@ -71,7 +71,7 @@ function injectPrayerHTML(prayer_obj) {
     opacity +
     ';"><div class="pic-container"><img class="pic" src="__USER_PIC_URL__" style="width:75px; height:75px;"/></div><div class="info-container"><li class="panel panel-info"><div class="panel-heading">' +
 		prayer_obj.get("type") +
-		'</div><div class="circle-indicator prayer-circle"><div class="new">NEW</div></div><a href="prayer_single_view.html?__PRAYER_ID__"><div class="panel-body">' +
+		'</div><a href="prayer_single_view.html?__PRAYER_ID__"><div class="panel-body">' +
 		prayer_obj.get("title") +
 		'</div></a></li></div></div>';
 
