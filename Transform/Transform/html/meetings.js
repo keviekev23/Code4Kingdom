@@ -1,4 +1,5 @@
-var nextEvent;
+var nextEvent = null;
+var user_id = "Ddw8VGKsZ1";
 
 var Event = Parse.Object.extend("Event", {
   initialize: function(time, location, organizer) {
@@ -14,6 +15,9 @@ var Event = Parse.Object.extend("Event", {
     this.save(null, {
 			success: function(event) {
 				nextEvent = event;
+				console.log(event.get("attendees").length + " attending");
+				document.getElementById("attend_button").innerHTML =
+          "Attending (" + event.get("attendees").length + ")";
 			},
 			error: function(event, error) {
 				alert('Failed to save your response: ' + error.description);
@@ -26,6 +30,9 @@ var Event = Parse.Object.extend("Event", {
 		this.save(null, {
 			success: function(event) {
 				nextEvent = event;
+				console.log(event.get("losers").length + " losers");
+				document.getElementById("loser_button").innerHTML =
+					"Not Attending (" + event.get("losers").length + ")";
 			},
 			error: function(event, error) {
 				alert('Failed to save your response: ' + error.description);
@@ -48,6 +55,20 @@ window.onload = function() {
   loadCurrentEvent();
 }
 
+function addAttendee() {
+	if (nextEvent == null) {
+		alert('next event has not finished loading');
+	}
+  nextEvent.addAttendee(user_id);
+}
+
+function addLoser() {
+	if (nextEvent == null) {
+		alert('next event has not finished loading');
+	}
+  nextEvent.addLoser(user_id);
+}
+
 function addEvent(time, location, organizer) {
   var event = new Event();
   event.initialize(time, location, organizer);
@@ -62,6 +83,10 @@ function loadCurrentEvent() {
   query.first({
     success: function(result) {
       nextEvent = result;
+			document.getElementById("attend_button").innerHTML =
+				"Attending (" + nextEvent.get("attendees").length + ")";
+			document.getElementById("loser_button").innerHTML =
+				"Not Attending (" + nextEvent.get("losers").length + ")";
     }
   });
 }
