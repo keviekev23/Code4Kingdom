@@ -4,12 +4,12 @@
 <head>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-  <script src="https://parse.com/downloads/javascript/parse-1.2.18.js"></script>
+    <script src="https://parse.com/downloads/javascript/parse-1.2.18.js"></script>
 	<script type="text/javascript" src="bootstrap.min.js"></script>
 	<script type="text/javascript" src="prayer.js"></script>
-  <script type="text/javascript" src="data_structure.js"></script>
+    <script type="text/javascript" src="data_structure.js"></script>
     
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel='stylesheet' href='prayer.css'>
 </head>
 
@@ -125,11 +125,11 @@
       </div>
       <div class="modal-body">
         <form id="new-prayer">
-          <input type="radio" name="type" value="prayer" style="border:1px solid grey;"> Prayer Request<br>
-          <input type="radio" name="type" value="praise" style="border:1px solid grey;"> Praise Report<br>
+          <input type="radio" id="prayer" name="type" value="prayer" style="border:1px solid grey;"> Prayer Request<br>
+          <input type="radio" id="praise" name="type" value="praise" style="border:1px solid grey;" checked="checked"> Praise Report<br>
 
-          Title: <input type="text" name="title" style="border:1px solid grey;width:100%;"><br>
-          Description: <textarea name="description" cols="20" rows="3"style="border:1px solid grey;width:100%;" ></textarea>
+          Title: <input type="text" id="title" name="title" style="border:1px solid grey;width:100%;"><br>
+          Description: <textarea name="description" id="description" cols="20" rows="3"style="border:1px solid grey;width:100%;" ></textarea>
 
         </form>
       </div>

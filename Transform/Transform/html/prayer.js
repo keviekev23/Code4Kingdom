@@ -39,8 +39,3 @@ function selectItem(number) {
 	window.location = newURL;
 	//window.location(currURL.replace('prayer.html','prayer_single_view.html');
 }
-
-function addPrayer() {
-    var form = document.forms["new-prayer"];
-    alert ("yhi");
-}

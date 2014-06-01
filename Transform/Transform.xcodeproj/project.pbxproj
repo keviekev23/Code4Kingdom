@@ -52,7 +52,7 @@
 		0AC96A60193A98B500584BF9 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC96A5F193A98B500584BF9 /* ProfileViewController.m */; };
 		0AC96A62193A993E00584BF9 /* profile.html in Resources */ = {isa = PBXBuildFile; fileRef = 0AC96A61193A993E00584BF9 /* profile.html */; };
 		1093C6DD0CAD406FA4CD979B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5929EC6AC34D8D871760F5 /* libPods.a */; };
-		D7E5579C193A7F750032DDB4 /* data_structure.js in Sources */ = {isa = PBXBuildFile; fileRef = D7E5579B193A7F750032DDB4 /* data_structure.js */; };
+		D7E5579C193A7F750032DDB4 /* data_structure.js in Resources */ = {isa = PBXBuildFile; fileRef = D7E5579B193A7F750032DDB4 /* data_structure.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -414,6 +414,7 @@
 				0A6EDA07193A63B70072B28D /* bootstrap.js in Resources */,
 				0A6EDA08193A63BB0072B28D /* bootstrap.min.js in Resources */,
 				0A6EDA22193A81FE0072B28D /* prayer_single_view.js in Resources */,
+				D7E5579C193A7F750032DDB4 /* data_structure.js in Resources */,
 				0A6EDA09193A63C10072B28D /* meetings.js in Resources */,
 				0A6EDA0A193A63C60072B28D /* prayer.js in Resources */,
 			);
@@ -467,7 +468,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E5579C193A7F750032DDB4 /* data_structure.js in Sources */,
 				0A6ED9D7193A43030072B28D /* PrayerRequestsViewController.m in Sources */,
 				0A6ED9B019394C8F0072B28D /* AppDelegate.m in Sources */,
 				0AC96A60193A98B500584BF9 /* ProfileViewController.m in Sources */,
