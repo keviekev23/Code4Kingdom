@@ -1,11 +1,15 @@
-var user_id = "Ddw8VGKsZ1";
 var user_name;
 var user_profile;
 
 window.onload = function() {
-    parseInit();
-    loadCurrentUser();
-    loadPreviousPrayers();
+  parseInit();
+	/*
+	var user_profile = "https://lh4.googleusercontent.com/-8kaOPZVEi0o/AAAAAAAAAAI/AAAAAAAAHYY/oCwUWlFWZ_0/s180-c-k-no/photo.jpg";
+	var user_name = "Jean Tang";
+	addMember(user_name, user_profile);
+	*/
+  loadCurrentUser();
+  loadPreviousPrayers();
 };
 
 jQuery(function($) {
@@ -89,6 +93,7 @@ function injectPrayerHTML(prayer_obj) {
 
 function loadPreviousPrayers() {
 	var query = new Parse.Query(Prayer);
+	query.ascending('status');
 	query.find({
 		success: function(results) {
 			var list = "";
@@ -98,7 +103,7 @@ function loadPreviousPrayers() {
 					list = html + list;
 				}
 			}
-               $("#draggablePanelList").append(list);
+			$("#draggablePanelList").append(list);
 		},
 		error: function(error) {
 			alert("Error code: " + error.code + ", message: " + error.message);

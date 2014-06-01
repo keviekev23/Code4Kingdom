@@ -1,5 +1,4 @@
 var nextEvent = null;
-var user_id = "Ddw8VGKsZ1";
 
 var Event = Parse.Object.extend("Event", {
   initialize: function(time, location, organizer) {
@@ -50,8 +49,7 @@ function popup() {
 }
 
 window.onload = function() {
-    parseInit();
-  
+	parseInit();
   loadCurrentEvent();
 }
 
