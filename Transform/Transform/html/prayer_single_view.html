@@ -4,10 +4,11 @@
 <head>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <script src="https://parse.com/downloads/javascript/parse-1.2.18.js"></script>
 	<script type="text/javascript" src="bootstrap.min.js"></script>
-	<script type="text/javascript" src="prayer.js"></script>
-    
-  	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<script type="text/javascript" src="data_structure.js"></script>
+	<script type="text/javascript" src="prayer_single_view.js"></script>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel='stylesheet' href='prayer_single_view.css'>
 </head>
 
@@ -18,13 +19,13 @@
 		<img class="pic" src="https://media.licdn.com/media/p/1/000/1e5/28c/131e6bc.jpg" style="width:75px; height:75px;"/>
 	</div>
 	<div class="head-info">
-		<div class="head-info-top">
+		<div class="head-info-top" id="prayer_type">
 			PRAYER REQUEST
 		</div>
 		<div class="head-info-bottom">
 			status:
-			<a class="btn btn-sml btn-primary" href="#" role="button" style="background-color:#74DF00;border:1px solid white; border-radius:4px; height:25px;line-height : 10px;">Open</a>
-			<a class="btn btn-sml btn-primary" href="#" role="button" style="background-color:#5CB8E6;border:1px solid white; border-radius:4px; height:25px;line-height : 10px;">Answered</a>
+			<a class="btn btn-sml btn-primary" href="#" role="button" style="background-color:#5CB8E6;border:1px solid white; border-radius:4px; height:25px;line-height : 10px;" id="open_button" onClick="openPrayer()">Open</a>
+			<a class="btn btn-sml btn-primary" href="#" role="button" style="background-color:#5CB8E6;border:1px solid white; border-radius:4px; height:25px;line-height : 10px;" id="answer_button" onClick="answerPrayer()">Answered</a>
 		</div>
 		<div class="circle-indicator praise-circle"> </div>
 	</div>
@@ -32,11 +33,11 @@
 </div>
 
 <div class="body-container">
-	<div class="body-title">
+	<div class="body-title" id="prayer_title">
 		Pray for my mom! 
 	</div>
 
-	<div class="body-text">
+	<div class="body-text" id="prayer_content">
 		She got sick earlier this week so please pray that she gets better!
 	</div>
 

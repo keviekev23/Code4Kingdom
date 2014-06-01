@@ -7,6 +7,7 @@ var Prayer = Parse.Object.extend("Prayer", {
     this.set("title", title);
     this.set("content", prayer_text);
     this.set("type", type);
+    this.set("status", type == "Prayer Request" ? "Open" : "");
     this.set("responses", []);
   },
 
@@ -37,7 +38,6 @@ var Event = Parse.Object.extend("Event", {
     this.save();
   }
 })
-
 function parseInit() {
     Parse.$ = jQuery;
     
