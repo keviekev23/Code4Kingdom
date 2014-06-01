@@ -26,30 +26,38 @@ jQuery(function($) {
 });
 
 function addPrayer() {
-    var form = document.forms["new-prayer"];
-    var title = form["title"].value;
-    var prayer_text = form["description"].value;
-    var type = form["prayer"].checked ? "Prayer Request" : "Praise Report";
-    var prayer = new Prayer();
-    prayer.initialize(user_id, user_name, user_profile, title, prayer_text, type);
-    prayer.save(null, {
-			success: function(prayer) {
-				console.log('saved prayer ' + prayer.title);
-			},
-			error: function(prayer, error) {
-				console.log(error);
-			}
-		});
-    
-    // Now update the individual member's prayer list.
-    var query = new Parse.Query(Member);
-    query.get(user_id, {
-			success: function(member) {
-				console.log('retrieved ' + member.get("name"));
-				member.addUnique("prayers", prayer);
-				member.save();
-			}
-		});
+	if (form["title"] == "") {
+		alert("Please enter a title");
+		return;
+	}
+	if (form["description"] == "") {
+		alert("Please enter the prayer content");
+		return;
+	}
+	var form = document.forms["new-prayer"];
+	var title = form["title"].value;
+	var prayer_text = form["description"].value;
+	var type = form["prayer"].checked ? "Prayer Request" : "Praise Report";
+	var prayer = new Prayer();
+	prayer.initialize(user_id, user_name, user_profile, title, prayer_text, type);
+	prayer.save(null, {
+		success: function(prayer) {
+			console.log('saved prayer ' + prayer.title);
+		},
+		error: function(prayer, error) {
+			console.log(error);
+		}
+	});
+	
+	// Now update the individual member's prayer list.
+	var query = new Parse.Query(Member);
+	query.get(user_id, {
+		success: function(member) {
+			console.log('retrieved ' + member.get("name"));
+			member.addUnique("prayers", prayer);
+			member.save();
+		}
+	});
 }
 
 function injectPrayerHTML(prayer_obj) {
