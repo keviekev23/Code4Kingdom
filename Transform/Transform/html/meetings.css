@@ -71,11 +71,12 @@ a:hover
 
 .sample{
 	height: 25px;
-	background-color: #fff;
+	background-color: #5CB8E6;
 	border-radius:4px;
-	margin-left:55px;
-	color:#5CB8E6;
+	margin-left:85px;
+	color:#fff;
 	padding-bottom: -5px;
+	font-size: 15px;
 
 }
 .sample-inner{
@@ -87,6 +88,7 @@ a:hover
 	border:1px solid #5CB8E6;
 	height: 100%;
 	float:left;
+	font-weight: 600;
 }
 .comment-text-container{
 	margin-left:75px;
