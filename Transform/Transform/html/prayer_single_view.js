@@ -38,6 +38,10 @@ function loadPrayer(id) {
         $("#open_button").css({"background-color":"#5CB8E6"});
         $("#answer_button").css({"background-color":"#336699"});
       }
+
+      if (prayer.get("type") == "Praise Report") {
+        document.getElementById('comments').innerHTML = "";
+      }
     }
   });
 }
