@@ -26,7 +26,8 @@ function loadPrayer(id) {
         prayer.get("content");
       document.getElementById('prayer_type').innerHTML =
         prayer.get("type");
-            console.log(prayer.get("status"));
+      document.getElementById('user_profile').src =
+        prayer.get("user_profile");
       if (prayer.get("status") == "Open") {
         $("#open_button").css({"background-color":"#336699"});
         $("#answer_button").css({"background-color":"#5CB8E6"});
