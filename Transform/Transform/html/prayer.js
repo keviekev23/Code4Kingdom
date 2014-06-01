@@ -1,6 +1,3 @@
-var user_name;
-var user_profile;
-
 window.onload = function() {
   parseInit();
 	/*

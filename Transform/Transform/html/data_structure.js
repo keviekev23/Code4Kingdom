@@ -1,5 +1,7 @@
 var previousPrayerRequests = [];
-var user_id = "6LHmZCtThR";
+var user_id = "agsQEhugMt";
+var user_name;
+var user_profile;
 
 var Prayer = Parse.Object.extend("Prayer", {
   initialize: function(user_id, user_name, user_profile, title, prayer_text, type) {
@@ -41,10 +43,10 @@ var Event = Parse.Object.extend("Event", {
   }
 })
 function parseInit() {
-    Parse.$ = jQuery;
+  Parse.$ = jQuery;
     
-    // Initialize Parse with your Parse application javascript keys
-    Parse.initialize("tK9bW3HzysojL4fxbjjj2H1zCT81JuyW1s6x02Vr",
+  // Initialize Parse with your Parse application javascript keys
+  Parse.initialize("tK9bW3HzysojL4fxbjjj2H1zCT81JuyW1s6x02Vr",
                      "ZiGuizOBCP3JK8TKqHhnWzzQLhO6Ym9iJOFJWP2F");
 }
 

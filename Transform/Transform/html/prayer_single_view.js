@@ -1,3 +1,6 @@
+var user_name;
+var user_profile;
+
 window.onload = function() {
   parseInit();
   currentPrayerID = getParameterByName('prayer_id');
@@ -5,6 +8,7 @@ window.onload = function() {
     loadPrayer(currentPrayerID);
   }
   // Otherwise it's on iOS and we will have native chrome trigger loadPrayer.
+  loadCurrentUser();
 };
 
 function getParameterByName(name) {
@@ -14,6 +18,16 @@ function getParameterByName(name) {
   }
   var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
   return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function loadCurrentUser() {
+	var query = new Parse.Query(Member);
+	query.get(user_id, {
+            success: function(member) {
+            user_name = member.get("name");
+            user_profile = member.get("profile_url");
+            }
+            });
 }
 
 function loadPrayer(id) {
@@ -65,4 +79,12 @@ function updatePrayerStatus(status) {
       }
     }
   })
+}
+
+function prayForPrayer() {
+  alert(user_id + ' ' + user_profile);
+  var html = '<div class="comment"><div class="pic-container"><img class="comment-pic" src="' +
+    user_profile +
+    '" style="width:50px; height:50px;"/></div><div class="comment-text-container"><div class="comment-text">Prayed for you!</div></div></div>';
+  $("#comments").prepend(html);
 }
