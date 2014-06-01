@@ -1,14 +1,17 @@
+var previousPrayerRequests = [];
+
 var Prayer = Parse.Object.extend("Prayer", {
-  // Ensure that each todo created has `content`.
   initialize: function(user_id, title, prayer_text, type) {
     this.set("user", user_id);
     this.set("title", title);
     this.set("content", prayer_text);
     this.set("type", type);
+    this.set("responses", []);
   },
 
   addResponse: function (text) {
     this.addUnique("responses", text);
+    this.save();
   },
 });
 
@@ -20,19 +23,21 @@ var Member = Parse.Object.extend("Member", {
   }
 });
 
+var Event = Parse.Object.extend("Event", {
+  initialize: function(time, location, organizer) {
+    this.set("time", time);
+    this.set("location", location);
+    this.set("organizer", organizer);
+    this.set("rsvp", []);
+  }
+})
+
 window.onload = function() {
   Parse.$ = jQuery;
   
   // Initialize Parse with your Parse application javascript keys
   Parse.initialize("tK9bW3HzysojL4fxbjjj2H1zCT81JuyW1s6x02Vr",
                    "ZiGuizOBCP3JK8TKqHhnWzzQLhO6Ym9iJOFJWP2F");
-
-  /* testing functions
-  addMember("Kevin Tu", "https://media.licdn.com/media/p/1/000/1e5/28c/131e6bc.jpg");
-
-  addPrayer("Ddw8VGKsZ1", "Please pray for my mom.",
-            "Please pray for my mom who is sick.", "prayer_request");
-  */
 
   loadPreviousPrayers();
 };
@@ -72,6 +77,7 @@ function loadPreviousPrayers() {
   query.find({
     success: function(results) {
       console.log('returned ' + results.length + ' prayers.');
+      previousPrayerRequests = results;
     }
   });
 }
