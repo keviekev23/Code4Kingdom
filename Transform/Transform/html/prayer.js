@@ -3,16 +3,8 @@ function popup() {
 }
 
 window.onload = function() {
- //  	var divs = document.getElementsByTagName("div");
-	// for(var i = 0; i < divs.length; i++){
-	//    	//do something to each div like
-	//    	if(divs[i].className == "circle-indicator prayer-circle"){
-	// 		divs[i].style.backgroundColor = "#F5DA81";
-	//    	}
-	//    	if(divs[i].className == "circle-indicator praise-circle"){
-	// 		divs[i].style.backgroundColor = "#99FF66";
-	//    	}
-	// }
+    parseInit();
+    loadPreviousPrayers();
 };
 
 jQuery(function($) {
@@ -88,8 +80,3 @@ function loadPreviousPrayers() {
                }
                });
 }
-
-window.onload = function() {
-    parseInit();
-    loadPreviousPrayers();
-};
