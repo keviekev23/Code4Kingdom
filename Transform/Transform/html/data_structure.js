@@ -1,3 +1,5 @@
+var previousPrayerRequests = [];
+
 var Prayer = Parse.Object.extend("Prayer", {
   initialize: function(user_id, title, prayer_text, type) {
     this.set("user", user_id);
@@ -21,7 +23,7 @@ var Member = Parse.Object.extend("Member", {
   }
 });
 
-var Event = Prase.object.extend("Event", {
+var Event = Parse.Object.extend("Event", {
   initialize: function(time, location, organizer) {
     this.set("time", time);
     this.set("location", location);
@@ -75,6 +77,7 @@ function loadPreviousPrayers() {
   query.find({
     success: function(results) {
       console.log('returned ' + results.length + ' prayers.');
+      previousPrayerRequests = results;
     }
   });
 }
