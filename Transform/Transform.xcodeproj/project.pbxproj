@@ -58,6 +58,9 @@
 		0AC96A60193A98B500584BF9 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC96A5F193A98B500584BF9 /* ProfileViewController.m */; };
 		0AC96A62193A993E00584BF9 /* profile.html in Resources */ = {isa = PBXBuildFile; fileRef = 0AC96A61193A993E00584BF9 /* profile.html */; };
 		1093C6DD0CAD406FA4CD979B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5929EC6AC34D8D871760F5 /* libPods.a */; };
+		29AB98E5193AE80E00361A8E /* profile.css in Resources */ = {isa = PBXBuildFile; fileRef = 29AB98E3193AE80E00361A8E /* profile.css */; };
+		29AB98E6193AE80E00361A8E /* profile.js in Resources */ = {isa = PBXBuildFile; fileRef = 29AB98E4193AE80E00361A8E /* profile.js */; };
+		29AB98E8193AEE1800361A8E /* book_icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 29AB98E7193AEE1800361A8E /* book_icon_72.png */; };
 		D7E5579C193A7F750032DDB4 /* data_structure.js in Resources */ = {isa = PBXBuildFile; fileRef = D7E5579B193A7F750032DDB4 /* data_structure.js */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +136,9 @@
 		0AC96A5E193A98B500584BF9 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Transform/ProfileViewController.h; sourceTree = "<group>"; };
 		0AC96A5F193A98B500584BF9 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Transform/ProfileViewController.m; sourceTree = "<group>"; };
 		0AC96A61193A993E00584BF9 /* profile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = profile.html; sourceTree = "<group>"; };
+		29AB98E3193AE80E00361A8E /* profile.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = profile.css; sourceTree = "<group>"; };
+		29AB98E4193AE80E00361A8E /* profile.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = profile.js; sourceTree = "<group>"; };
+		29AB98E7193AEE1800361A8E /* book_icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = book_icon_72.png; path = Transform/html/book_icon_72.png; sourceTree = SOURCE_ROOT; };
 		42A1168A299C469AA21AA34E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AA5929EC6AC34D8D871760F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E5579B193A7F750032DDB4 /* data_structure.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = data_structure.js; sourceTree = "<group>"; };
@@ -261,6 +267,8 @@
 				0A6ED9ED193A465D0072B28D /* prayer.js */,
 				D7E5579B193A7F750032DDB4 /* data_structure.js */,
 				0AC96A61193A993E00584BF9 /* profile.html */,
+				29AB98E3193AE80E00361A8E /* profile.css */,
+				29AB98E4193AE80E00361A8E /* profile.js */,
 			);
 			name = html;
 			path = Transform/html;
@@ -325,6 +333,7 @@
 			children = (
 				0AB229CE193AB1A500E58249 /* grow@2x.png */,
 				0AB229CF193AB1A500E58249 /* profile@2x.png */,
+				29AB98E7193AEE1800361A8E /* book_icon_72.png */,
 				0AB229CC193AA28E00E58249 /* pray@2x.png */,
 				0AB229CA193A9C8600E58249 /* house@2x.png */,
 			);
@@ -413,6 +422,7 @@
 				0A6ED9FB193A465D0072B28D /* meetings.html in Resources */,
 				0A6ED9F3193A465D0072B28D /* bootstrap.min.css in Resources */,
 				0A6ED9EF193A465D0072B28D /* bootstrap-theme.css.map in Resources */,
+				29AB98E6193AE80E00361A8E /* profile.js in Resources */,
 				0AB229D8193AE02700E58249 /* grow.css in Resources */,
 				0A6ED9F6193A465D0072B28D /* glyphicons-halflings-regular.ttf in Resources */,
 				0A6EDA1C193A7E980072B28D /* prayer_single_view.css in Resources */,
@@ -438,9 +448,11 @@
 				0A6EDA07193A63B70072B28D /* bootstrap.js in Resources */,
 				0A6EDA08193A63BB0072B28D /* bootstrap.min.js in Resources */,
 				0A6EDA22193A81FE0072B28D /* prayer_single_view.js in Resources */,
+				29AB98E5193AE80E00361A8E /* profile.css in Resources */,
 				D7E5579C193A7F750032DDB4 /* data_structure.js in Resources */,
 				0AB229DA193AE02700E58249 /* grow.js in Resources */,
 				0A6EDA09193A63C10072B28D /* meetings.js in Resources */,
+				29AB98E8193AEE1800361A8E /* book_icon_72.png in Resources */,
 				0A6EDA0A193A63C60072B28D /* prayer.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
