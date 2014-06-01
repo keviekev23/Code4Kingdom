@@ -42,8 +42,12 @@ function addPrayer() {
 	var prayer = new Prayer();
 	prayer.initialize(user_id, user_name, user_profile, title, prayer_text, type);
 	prayer.save(null, {
-		success: function(prayer) {
-			console.log('saved prayer ' + prayer.title);
+        success: function(prayer) {
+				var html = injectPrayerHTML(prayer);
+				if (html) {
+                $("#draggablePanelList").prepend(html)
+                }
+                
 		},
 		error: function(prayer, error) {
 			console.log(error);
@@ -94,7 +98,7 @@ function loadPreviousPrayers() {
 					list = html + list;
 				}
 			}
-			$("#draggablePanelList").append(list)
+               $("#draggablePanelList").append(list);
 		},
 		error: function(error) {
 			alert("Error code: " + error.code + ", message: " + error.message);
