@@ -41,7 +41,7 @@
         NSString *fileName = [file substringWithRange:NSMakeRange(0, [file rangeOfString:@"."].location)];
         if ([fileName isEqualToString:@"prayer_single_view"]) {
             PrayerDetailViewController *vc = (PrayerDetailViewController *)[[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([PrayerDetailViewController class])];
-            //vc.prayerId = [pathComponents objectAtIndex:pathComponents.count-1];
+            vc.prayerId = request.URL.query;
             [self.navigationController pushViewController:vc animated:YES];
             return NO;
         }
