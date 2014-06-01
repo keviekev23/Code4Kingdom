@@ -18,6 +18,8 @@ var Event = Parse.Object.extend("Event", {
 				console.log(event.get("attendees").length + " attending");
 				document.getElementById("attend_button").innerHTML =
           "Attending (" + event.get("attendees").length + ")";
+        $("#attend_button").css({"background-color":"#336699"});
+        $("#loser_button").css({"background-color":"#5CB8E6"});
 			},
 			error: function(event, error) {
 				alert('Failed to save your response: ' + error.description);
@@ -33,6 +35,8 @@ var Event = Parse.Object.extend("Event", {
 				console.log(event.get("losers").length + " losers");
 				document.getElementById("loser_button").innerHTML =
 					"Not Attending (" + event.get("losers").length + ")";
+        $("#attend_button").css({"background-color":"#5CB8E6"});
+        $("#loser_button").css({"background-color":"#336699"});
 			},
 			error: function(event, error) {
 				alert('Failed to save your response: ' + error.description);
