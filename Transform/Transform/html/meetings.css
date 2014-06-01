@@ -3,6 +3,8 @@ body {
 	background:#5CB8E6;
 	font-size: 15px;
 	color:white;
+
+	height: 100%;
 }
 a { 
 	color: inherit; 
@@ -102,4 +104,16 @@ a:hover
 	margin-right: 15px;
 	border-radius:5px;
 	color:#5CB8E6;
+}
+.banner-container{
+	margin:-5px;
+	background-size: cover;
+	height: 150px;
+	padding:0px;
+	width: 100%;
+	margin-left: 0.5px;
+	margin-bottom: 1px;
+	margin-top: 1px;
+	margin-top: -20px;
+
 }
