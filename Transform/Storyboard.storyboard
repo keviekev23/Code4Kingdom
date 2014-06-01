@@ -24,7 +24,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="IRN-We-vXb"/>
+                    <navigationItem key="navigationItem" id="IRN-We-vXb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="reply" id="1gd-Wp-gWt">
+                            <connections>
+                                <action selector="shareAction:" destination="OL1-b3-jdM" id="2Ty-JO-ZK4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="dOY-pD-hWw" id="xxY-b5-vop"/>
                     </connections>
@@ -235,7 +241,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="grow.png" width="30" height="33"/>
+        <image name="grow.png" width="30" height="30"/>
         <image name="house.png" width="30" height="30"/>
         <image name="pray.png" width="30" height="30"/>
         <image name="profile.png" width="30" height="30"/>

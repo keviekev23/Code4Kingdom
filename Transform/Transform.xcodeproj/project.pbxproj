@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A03BF83193B9E30004BF335 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A03BF82193B9E30004BF335 /* MessageUI.framework */; };
 		0A6ED9A019394C8F0072B28D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6ED99F19394C8F0072B28D /* Foundation.framework */; };
 		0A6ED9A219394C8F0072B28D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6ED9A119394C8F0072B28D /* CoreGraphics.framework */; };
 		0A6ED9A419394C8F0072B28D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6ED9A319394C8F0072B28D /* UIKit.framework */; };
@@ -75,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A03BF82193B9E30004BF335 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0A6ED99C19394C8F0072B28D /* Transform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6ED99F19394C8F0072B28D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A6ED9A119394C8F0072B28D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -149,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A03BF83193B9E30004BF335 /* MessageUI.framework in Frameworks */,
 				0A6EDA24193A8F9C0072B28D /* JavaScriptCore.framework in Frameworks */,
 				0A6ED9A219394C8F0072B28D /* CoreGraphics.framework in Frameworks */,
 				0A6ED9A419394C8F0072B28D /* UIKit.framework in Frameworks */,
@@ -196,6 +199,7 @@
 		0A6ED99E19394C8F0072B28D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A03BF82193B9E30004BF335 /* MessageUI.framework */,
 				0A6EDA23193A8F9C0072B28D /* JavaScriptCore.framework */,
 				0A6ED99F19394C8F0072B28D /* Foundation.framework */,
 				0A6ED9A119394C8F0072B28D /* CoreGraphics.framework */,
