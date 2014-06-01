@@ -29,6 +29,11 @@ var Event = Parse.Object.extend("Event", {
     this.set("location", location);
     this.set("organizer", organizer);
     this.set("rsvp", []);
+  },
+
+  addAttendee: function(user_id) {
+    this.addUnique('rsvp', user_id);
+    this.save();
   }
 })
 
@@ -44,11 +49,11 @@ window.onload = function() {
 
 function addPrayer() {
     var form = document.forms["new-prayer"];
-    var prayer = new Prayer();
     var user_id = "Ddw8VGKsZ1";
     var title = form["title"].value;
     var prayer_text = form["description"].value;
     var type = form["prayer"].checked ? "prayer_request" : "praise_report";
+    var prayer = new Prayer();
     prayer.initialize(user_id, title, prayer_text, type);
     prayer.save(null, {
                 success: function(prayer) {
@@ -68,6 +73,12 @@ function addPrayer() {
               member.save();
               }
               });
+}
+
+function addEvent(time, location, organizer) {
+  var event = new Event();
+  event.initialize(time, location, organizer);
+  event.save();
 }
 
 function addMember(name, profile_url) {
