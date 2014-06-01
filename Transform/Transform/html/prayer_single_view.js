@@ -1,9 +1,20 @@
-var currentPrayerID = '7Z6hHJp4yk';
 window.onload = function() {
-    parseInit();
-  
-  loadPrayer(currentPrayerID);
+  parseInit();
+  currentPrayerID = getParameterByName('prayer_id');
+  if (currentPrayerID) {
+    loadPrayer(currentPrayerID);
+  }
+  // Otherwise it's on iOS and we will have native chrome trigger loadPrayer.
 };
+
+function getParameterByName(name) {
+  if (!window.location.search) {
+    // in simulator instead of browser
+    return null;
+  }
+  var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+  return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
 
 function loadPrayer(id) {
   var query = new Parse.Query(Prayer);

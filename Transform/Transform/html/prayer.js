@@ -78,7 +78,7 @@ function injectPrayerHTML(prayer_obj) {
     var pic_url = prayer_obj.get("user_profile");
     if (pic_url) {
         html = html.replace("__USER_PIC_URL__", prayer_obj.get("user_profile"));
-        html = html.replace("__PRAYER_ID__", prayer_obj.id);
+        html = html.replace("__PRAYER_ID__", 'prayer_id=' + prayer_obj.id);
     }
     else {
         html = "";
