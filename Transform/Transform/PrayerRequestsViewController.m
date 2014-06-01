@@ -23,8 +23,6 @@
     [self loadCurrentLocalUrl:@"prayer"];
     
     self.title = @"Prayers & Praise";
-    
-    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self.webView selector:@selector(reload) userInfo:nil repeats:YES];
 }
 
 #pragma mark - UIWebViewDelegate
