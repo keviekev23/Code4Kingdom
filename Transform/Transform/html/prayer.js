@@ -27,6 +27,7 @@ jQuery(function($) {
 });
 
 function addPrayer() {
+	var form = document.forms["new-prayer"];
 	if (form["title"] == "") {
 		alert("Please enter a title");
 		return;
@@ -35,7 +36,6 @@ function addPrayer() {
 		alert("Please enter the prayer content");
 		return;
 	}
-	var form = document.forms["new-prayer"];
 	var title = form["title"].value;
 	var prayer_text = form["description"].value;
 	var type = form["prayer"].checked ? "Prayer Request" : "Praise Report";
@@ -88,7 +88,7 @@ function loadPreviousPrayers() {
 			for (var i = 0; i < results.length; i++) {
 				var html = injectPrayerHTML(results[i]);
 				if (html) {
-					list += html;
+					list = html + list;
 				}
 			}
 			$("#draggablePanelList").append(list)
