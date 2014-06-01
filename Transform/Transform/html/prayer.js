@@ -62,16 +62,19 @@ function addPrayer() {
 }
 
 function injectPrayerHTML(prayer_obj) {
-  var html = '<div class="content-container"><div class="pic-container"><img class="pic" src="__USER_PIC_URL__" style="width:75px; height:75px;"/></div><div class="info-container"><li class="panel panel-info"><div class="panel-heading">' +
+  var opacity = prayer_obj.get("status") == "Answered" ? 0.5 : 1;
+  var html = '<div class="content-container" style="opacity:' +
+    opacity +
+    ';"><div class="pic-container"><img class="pic" src="__USER_PIC_URL__" style="width:75px; height:75px;"/></div><div class="info-container"><li class="panel panel-info"><div class="panel-heading">' +
 		prayer_obj.get("type") +
-		'</div><div class="circle-indicator prayer-circle"><div class="new">NEW</div></div><a href="prayer_single_view.html/__USER_ID__"><div class="panel-body">' +
+		'</div><div class="circle-indicator prayer-circle"><div class="new">NEW</div></div><a href="prayer_single_view.html?__PRAYER_ID__"><div class="panel-body">' +
 		prayer_obj.get("title") +
 		'</div></a></li></div></div>';
 
     var pic_url = prayer_obj.get("user_profile");
     if (pic_url) {
         html = html.replace("__USER_PIC_URL__", prayer_obj.get("user_profile"));
-        html = html.replace("__USER_ID__", prayer_obj.get("user"));
+        html = html.replace("__PRAYER_ID__", prayer_obj.id);
     }
     else {
         html = "";
