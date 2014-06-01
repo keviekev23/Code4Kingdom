@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A03BF83193B9E30004BF335 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A03BF82193B9E30004BF335 /* MessageUI.framework */; };
+		0A03BF85193BB38E004BF335 /* title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A03BF84193BB38E004BF335 /* title@2x.png */; };
 		0A6ED9A019394C8F0072B28D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6ED99F19394C8F0072B28D /* Foundation.framework */; };
 		0A6ED9A219394C8F0072B28D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6ED9A119394C8F0072B28D /* CoreGraphics.framework */; };
 		0A6ED9A419394C8F0072B28D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6ED9A319394C8F0072B28D /* UIKit.framework */; };
@@ -77,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		0A03BF82193B9E30004BF335 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		0A03BF84193BB38E004BF335 /* title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title@2x.png"; sourceTree = "<group>"; };
 		0A6ED99C19394C8F0072B28D /* Transform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6ED99F19394C8F0072B28D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A6ED9A119394C8F0072B28D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -336,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				0AB229CE193AB1A500E58249 /* grow@2x.png */,
+				0A03BF84193BB38E004BF335 /* title@2x.png */,
 				0AB229CF193AB1A500E58249 /* profile@2x.png */,
 				29AB98E7193AEE1800361A8E /* book_icon_72.png */,
 				0AB229CC193AA28E00E58249 /* pray@2x.png */,
@@ -439,6 +442,7 @@
 				0A6ED9AA19394C8F0072B28D /* InfoPlist.strings in Resources */,
 				0AB229D9193AE02700E58249 /* grow.html in Resources */,
 				0A6ED9FE193A465D0072B28D /* prayer.html in Resources */,
+				0A03BF85193BB38E004BF335 /* title@2x.png in Resources */,
 				0A6ED9F2193A465D0072B28D /* bootstrap.css.map in Resources */,
 				0A6EDA1D193A7E980072B28D /* prayer_single_view.html in Resources */,
 				0AB229D0193AB1A500E58249 /* grow@2x.png in Resources */,
