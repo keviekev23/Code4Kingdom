@@ -4,6 +4,7 @@ var user_profile;
 
 window.onload = function() {
     parseInit();
+    loadCurrentUser();
     loadPreviousPrayers();
 };
 
@@ -88,8 +89,8 @@ function loadPreviousPrayers() {
                }
                $("#draggablePanelList").append(list)
                },
-               error: function(results) {
-               alert("got an error");
+               error: function(error) {
+               alert("got an error" + error.message());
                }
                });
 }
@@ -103,9 +104,3 @@ function loadCurrentUser() {
 		}
 	});
 }
-
-window.onload = function() {
-    parseInit();
-		loadCurrentUser();
-    loadPreviousPrayers();
-};
