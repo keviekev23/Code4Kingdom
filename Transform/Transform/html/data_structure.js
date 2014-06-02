@@ -1,12 +1,25 @@
 var previousPrayerRequests = [];
-var user_id = "Ddw8VGKsZ1";
+var user_id = "FqT59vQI3X"; // Caleb Lin
+/*
+var user_id = "agsQEhugMt"; // Jerry Tu
+var user_id = "ouJBgUewAy"; // Jean Tang
+var user_id = "6LHmZCtThR"; // Kevin Liang
+var user_id = "UmOCWfcPFF"; // June Wang
+var user_id = "FqT59vQI3X"; // Caleb Lin
+var user_id = "Ddw8VGKsZ1"; // Kevin Tu
+*/
+var user_name;
+var user_profile;
 
 var Prayer = Parse.Object.extend("Prayer", {
-  initialize: function(user_id, title, prayer_text, type) {
+  initialize: function(user_id, user_name, user_profile, title, prayer_text, type) {
     this.set("user", user_id);
+    this.set("user_name", user_name);
+    this.set("user_profile", user_profile);
     this.set("title", title);
     this.set("content", prayer_text);
     this.set("type", type);
+    this.set("status", type == "Prayer Request" ? "Open" : "Praise");
     this.set("responses", []);
   },
 
@@ -24,41 +37,25 @@ var Member = Parse.Object.extend("Member", {
   }
 });
 
-window.onload = function() {
+var Event = Parse.Object.extend("Event", {
+  initialize: function(time, location, organizer) {
+    this.set("time", time);
+    this.set("location", location);
+    this.set("organizer", organizer);
+    this.set("rsvp", []);
+  },
+
+  addAttendee: function(user_id) {
+    this.addUnique('rsvp', user_id);
+    this.save();
+  }
+})
+function parseInit() {
   Parse.$ = jQuery;
-  
+    
   // Initialize Parse with your Parse application javascript keys
   Parse.initialize("tK9bW3HzysojL4fxbjjj2H1zCT81JuyW1s6x02Vr",
-                   "ZiGuizOBCP3JK8TKqHhnWzzQLhO6Ym9iJOFJWP2F");
-
-  loadPreviousPrayers();
-};
-
-function addPrayer() {
-    var form = document.forms["new-prayer"];
-    var title = form["title"].value;
-    var prayer_text = form["description"].value;
-    var type = form["prayer"].checked ? "prayer_request" : "praise_report";
-    var prayer = new Prayer();
-    prayer.initialize(user_id, title, prayer_text, type);
-    prayer.save(null, {
-                success: function(prayer) {
-                console.log('saved prayer ' + prayer.title);
-                },
-                error: function(prayer, error) {
-                console.log(error);
-                }
-                });
-    
-    // Now update the individual member's prayer list.
-    var query = new Parse.Query(Member);
-    query.get(user_id, {
-              success: function(member) {
-              console.log('retrieved ' + member.get("name"));
-              member.addUnique("prayers", prayer_text);
-              member.save();
-              }
-              });
+                     "ZiGuizOBCP3JK8TKqHhnWzzQLhO6Ym9iJOFJWP2F");
 }
 
 function addMember(name, profile_url) {
@@ -67,13 +64,12 @@ function addMember(name, profile_url) {
   member.save();
 }
 
-function loadPreviousPrayers() {
-  console.log('loadPreviousPrayers');
-  var query = new Parse.Query(Prayer);
-  query.find({
-    success: function(results) {
-      console.log('returned ' + results.length + ' prayers.');
-      previousPrayerRequests = results;
-    }
-  });
+function loadCurrentUser() {
+	var query = new Parse.Query(Member);
+	query.get(user_id, {
+            success: function(member) {
+            user_name = member.get("name");
+            user_profile = member.get("profile_url");
+            }
+            });
 }

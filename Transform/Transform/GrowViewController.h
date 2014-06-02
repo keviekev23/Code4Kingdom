@@ -1,5 +1,5 @@
 //
-//  PrayerDetailViewController.h
+//  GrowViewController.h
 //  Transform
 //
 //  Created by Kevin Liang on 5/31/14.
@@ -8,8 +8,6 @@
 
 #import "WebContentViewController.h"
 
-@interface PrayerDetailViewController : WebContentViewController
-
-@property (nonatomic, strong) NSString *prayerId;
+@interface GrowViewController : WebContentViewController
 
 @end

@@ -1,5 +1,4 @@
 var nextEvent = null;
-var user_id = "Ddw8VGKsZ1";
 
 var Event = Parse.Object.extend("Event", {
   initialize: function(time, location, organizer) {
@@ -12,32 +11,32 @@ var Event = Parse.Object.extend("Event", {
 
   addAttendee: function(user_id) {
     this.addUnique('attendees', user_id);
-    this.save(null, {
-			success: function(event) {
-				nextEvent = event;
-				console.log(event.get("attendees").length + " attending");
-				document.getElementById("attend_button").innerHTML =
-          "Attending (" + event.get("attendees").length + ")";
-			},
-			error: function(event, error) {
-				alert('Failed to save your response: ' + error.description);
-			}
-		});
+    this.save();
+		this.remove('losers', user_id);
+		this.save();
+		nextEvent = this;
+		console.log(this.get("attendees").length + " attending");
+		document.getElementById("attend_button").innerHTML =
+			"Attending (" + this.get("attendees").length + ")";
+		document.getElementById("loser_button").innerHTML =
+			"Not Attending (" + this.get("losers").length + ")";
+		$("#attend_button").css({"background-color":"#336699"});
+		$("#loser_button").css({"background-color":"#5CB8E6"});
   },
 
 	addLoser: function(user_id) {
 		this.addUnique('losers', user_id);
-		this.save(null, {
-			success: function(event) {
-				nextEvent = event;
-				console.log(event.get("losers").length + " losers");
-				document.getElementById("loser_button").innerHTML =
-					"Not Attending (" + event.get("losers").length + ")";
-			},
-			error: function(event, error) {
-				alert('Failed to save your response: ' + error.description);
-			}
-		});
+		this.save();
+		this.remove('attendees', user_id);
+		this.save();
+		nextEvent = this;
+		console.log(this.get("losers").length + " losers");
+		document.getElementById("attend_button").innerHTML =
+			"Attending (" + this.get("attendees").length + ")";
+		document.getElementById("loser_button").innerHTML =
+			"Not Attending (" + this.get("losers").length + ")";
+    $("#attend_button").css({"background-color":"#5CB8E6"});
+    $("#loser_button").css({"background-color":"#336699"});
 	}
 })
 
@@ -46,12 +45,7 @@ function popup() {
 }
 
 window.onload = function() {
-  Parse.$ = jQuery;
-  
-  // Initialize Parse with your Parse application javascript keys
-  Parse.initialize("tK9bW3HzysojL4fxbjjj2H1zCT81JuyW1s6x02Vr",
-                   "ZiGuizOBCP3JK8TKqHhnWzzQLhO6Ym9iJOFJWP2F");
-  
+	parseInit();
   loadCurrentEvent();
 }
 

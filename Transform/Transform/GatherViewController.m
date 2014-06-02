@@ -50,4 +50,46 @@
 }
 */
 
+
+#pragma mark - sending text
+- (IBAction)shareAction:(id)sender
+{
+    if([MFMessageComposeViewController canSendText]) {
+        NSString *message = [NSString stringWithFormat:@"Come hang out in my small group with me this Tuesday, 7:30pm @ 1 Trinity ave, Redwood City"];
+        
+        MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
+        messageController.messageComposeDelegate = self;
+        [messageController setBody:message];
+        
+        // Present message view controller on screen
+        [self presentViewController:messageController animated:YES completion:nil];
+    }
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
+{
+    switch (result) {
+        case MessageComposeResultCancelled:
+        break;
+        
+        case MessageComposeResultFailed:
+        {
+            UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to send SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [warningAlert show];
+            break;
+        }
+        
+        case MessageComposeResultSent:
+        {
+            UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Spread the good news" message:@"For He is good!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [warningAlert show];
+        }
+        break;
+        
+        default:
+        break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

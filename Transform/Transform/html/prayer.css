@@ -125,16 +125,14 @@ a:hover
 	height:82.5px;
 }
 .circle-indicator{
-	background-color: #fff;	
-	height: 18.75px;
-	width: 18.75px;
-	border-radius: 15.625px;
+	background-color: #5CB8E6;	
+
 	float:right;
 	margin-right: 6.25px;
 	margin-top: -25.5px;
 }
-.circle-indicator .poop {
-	margin-left: 6px;
+.circle-indicator .new {
+	margin-right: 0px;
 }
 #addPrayerRequest{
 	position:relative;
@@ -148,7 +146,10 @@ a:hover
 
 }
 .btn .btn-primary{
-	background-color:#5CB8E6
+	background-color:#5CB8E6;
 
 }
 
+.new{
+	color:yellow;
+}

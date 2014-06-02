@@ -4,7 +4,8 @@
 <head>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-  <script src="https://parse.com/downloads/javascript/parse-1.2.18.js"></script>
+    <script type="text/javascript" src="parse-1.2.18.js"></script>
+	<script type="text/javascript" src="data_structure.js"></script>
 	<script type="text/javascript" src="meetings.js"></script>
 	<link rel='stylesheet' href='meetings.css'>
 </head>
@@ -17,31 +18,31 @@
 
 
 <div class="comment">
-	<div class="pic-container">
+	<div class="pic-container" style = "margin-left:40px;">
 		Leader:
 	</div>
 	<div class="sample">
-		<div class="sample-inner">
+		<div class="sample-inner" id="leader">
 			Kevin Tu
 		</div>
 	</div>
 </div>
-<div class="comment">
-	<div class="pic-container">
+<div class="comment" >
+	<div class="pic-container" style = "margin-left:48px;">
 		Place:
 	</div>
 	<div class="sample">
-		<div class="sample-inner">
+		<div class="sample-inner" id="location">
 			900 Alma Street - Palo Alto, CA
 		</div>
 	</div>
 </div>
 <div class="comment">
-	<div class="pic-container">
+	<div class="pic-container" style = "margin-left:50px;">
 		Time:
 	</div>
 	<div class="sample">
-		<div class="sample-inner">
+		<div class="sample-inner" id="time">
 			Thursdays @ 8PM
 		</div>
 	</div>
@@ -65,7 +66,6 @@
 
 <button id="attend_button" onclick="addAttendee()">Attending</button>
 <button id="loser_button" onclick="addLoser()">Not Attending</button>
-<button id="invite_someone" onclick="inviteSomeone()">Invite Someone</button>
 
 </body>
 

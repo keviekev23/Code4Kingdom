@@ -24,9 +24,14 @@
     // Do any additional setup after loading the view.
     self.webView.delegate = self;
     
-    UIColor *tintColor = [UIColor colorWithRed:92.0/255.0 green:184.0/255.0 blue:230.0/255.0 alpha:1.0];
+    //UIColor *tintColor = [UIColor colorWithRed:92.0/255.0 green:184.0/255.0 blue:230.0/255.0 alpha:1.0];
+    UIColor *tintColor = [UIColor colorWithRed:66.0/255.0 green:156.0/255.0 blue:198.0/255.0 alpha:1.0];
     self.navigationController.navigationBar.barTintColor = tintColor;
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], UITextAttributeTextColor, nil] forState:UIControlStateNormal];
     self.navigationController.navigationBar.translucent = NO;
+    UIImageView *navTitle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title.png"]];
+    self.navigationItem.titleView = navTitle;
     self.tabBarController.tabBar.tintColor = tintColor;
 }
 

@@ -7,7 +7,10 @@
 //
 
 #import "WebContentViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface GatherViewController : WebContentViewController
+@interface GatherViewController : WebContentViewController <MFMessageComposeViewControllerDelegate>
+
+- (IBAction)shareAction:(id)sender;
 
 @end
